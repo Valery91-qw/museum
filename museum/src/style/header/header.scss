@@ -1,0 +1,50 @@
+@import "./src/style/common/sass/variables.scss";
+
+header {
+  background-color: $BG-Dark;
+}
+
+.header-container {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    display: flex;
+
+    .logo-image {
+      width: 25px;
+      height: 25px;
+      background-image: url("./assets/svg/louvre-icon.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 25px;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    .logo-text {
+      margin-left: 25px;
+      font-family: $Font-to-heading;
+      font-size: 28px;
+      letter-spacing: 5px;
+      line-height: 31px;
+      color: $Font-white;
+      text-transform: uppercase;
+    }
+  }
+
+  .navigation {
+
+    ul {
+      display: flex;
+      color: $Font-white;
+
+      li {
+        list-style-type: none;
+      }
+    }
+
+  }
+}
+

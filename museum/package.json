@@ -5,8 +5,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "../valery91-qw-JSFE2021Q3/museum/node_modules/.bin/webpack",
-    "dev": "../valery91-qw-JSFE2021Q3/museum/node_modules/.bin/webpack serve --env dev"
+    "build": "webpack",
+    "dev": "webpack serve --env dev"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",

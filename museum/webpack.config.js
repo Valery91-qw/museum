@@ -1,6 +1,6 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MinCssExtractPlugin = require('mini-css-extract-plugin');
 
 const devServer = (isDev) => !isDev ? {} : {
@@ -13,6 +13,7 @@ const devServer = (isDev) => !isDev ? {} : {
 
 module.exports = ({ dev }) => ({
     mode: dev ? 'development' : 'production',
+    devtool: dev ? 'inline-source-map' : false,
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
@@ -27,11 +28,11 @@ module.exports = ({ dev }) => ({
                 use: ['babel-loader']
             },
             {
-                test: /\.(?:png|jpg|jpeg|gif)$/i,
+                test: /\.(?:png|jpg|jpeg|gif|svg)$/i,
                 type: 'asset/resource',
             },
             {
-                test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+                test: /\.(woff(2)?|eot|ttf|otf|)$/,
                 type: 'asset/inline',
             },
             {
@@ -45,7 +46,7 @@ module.exports = ({ dev }) => ({
             {
                 test: /\.s[ac]ss$/i,
                 use: [MinCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-            }
+            },
         ]
     },
     plugins: [
