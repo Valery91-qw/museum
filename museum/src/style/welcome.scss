@@ -2,21 +2,89 @@
 
 .welcome-section {
   background-color: $BG-Dark;
+
   .welcome-container {
     display: flex;
     position: relative;
     width: 100%;
     justify-content: end;
+
     .welcome-description {
       position: absolute;
       top: 150px;
       left: 0;
     }
+
+    .welcome-description > p {
+      font-size: 28px;
+      line-height: 33px;
+      padding: 25px 0;
+    }
+
+    .welcome-description > button {
+      margin-top: 50px;
+    }
+
     .welcome-slider {
       .welcome-slider-image {
         margin-bottom: 60px;
       }
-      .welcome-slider-сontrol {
+
+      .welcome-slider-pagination {
+        display: flex;
+        position: absolute;
+        padding: 40px 75px;
+        bottom: 0;
+        right: 0;
+        background-color: $BG-Dark;
+
+        .welcome-slider-pagination-num {
+          display: flex;
+
+          .welcome-slider-pagination-num > .section-text {
+            font-size: $Font-text-size;
+            line-height: 40px;
+            text-transform: uppercase;
+          }
+        }
+
+        .welcome-slider-pagination-carousel {
+          display: flex;
+          align-items: center;
+          margin: 0 55px;
+        }
+
+        .welcome-slider-pagination-carousel > li {
+          margin-left: 25px;
+          list-style: none;
+        }
+
+        .welcome-slider-pagination-carousel > li:first-child {
+          margin-left: 0;
+          background-color: #D2B183;
+        }
+
+        .welcome-slider-pagination-carousel > li {
+          content: '';
+          width: 16px;
+          height: 16px;
+          background-color: #ffffff;
+        }
+
+        .welcome-slider-pagination-carousel > li:first-child:hover {
+          background-color: #9D8665;
+        }
+        .welcome-slider-pagination-buttons {
+          display: flex;
+        }
+
+        .welcome-slider-pagination-buttons > input:hover {
+          filter: invert(59%) sepia(5%) saturate(2051%) hue-rotate(356deg) brightness(91%) contrast(70%);
+        }
+        .welcome-slider-pagination-buttons > .next {
+          margin-left: 18px;
+          transform: rotate(180deg);
+        }
 
       }
     }

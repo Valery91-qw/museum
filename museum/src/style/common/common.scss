@@ -8,7 +8,7 @@
 }
 .section-title {
   font-family: $Font-heading;
-  font-size: 80px;
+  font-size: $Font-heading-size;
   font-weight: 400;
   line-height: 90px;
   letter-spacing: 5px;
@@ -17,9 +17,25 @@
 }
 .section-text {
   font-family: $Font-text;
-  font-size: 28px;
+  font-size: $Font-text-size;
   font-weight: 300;
-  line-height: 33px;
+  line-height: 38.5px;
   color: $Font-lite;
   letter-spacing: 2px;
+}
+.button {
+  padding: 24px 64px;
+  font-family: $Font-text;
+  font-size: $Button-font-size;
+  line-height: 26px;
+  letter-spacing: 2px;
+  color: $Font-lite;
+  border: none;
+  background-color: $Dark-red;
+  border-radius: 10px;
+  transition: 0.3s linear;
+}
+.button:hover {
+  background-color: $Font-gold;
+  transition: 0.3s linear;
 }

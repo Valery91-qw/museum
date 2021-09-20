@@ -8,10 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/svg/louvre-icon.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/svg/louvre-icon.svg">
     <title>museum</title>
 </head>
 <body>
@@ -34,23 +33,36 @@
     </div>
 </header>
 <main>
-<!--    first section, welcome-container start-->
+    <!--    first section, welcome-container start-->
     <section class="welcome-section">
         <div class="container welcome-container">
             <div class="welcome-description">
                 <h2 class="section-title">Welcome</br>to the louvre</h2>
                 <p class="section-text">From the castle to the museum</p>
-                <button>Discover the Louvre</button>
+                <button class="button">Discover the Louvre</button>
             </div>
             <div class="welcome-slider">
                 <img class="welcome-slider-image" src="assets/img/welcome-image.jpg" alt="monna">
-                <div class="welcome-slider-сontrol">
-
+                <div class="welcome-slider-pagination">
+                    <div class="welcome-slider-pagination-num">
+                        <p class="section-text">01 | 05</p>
+                    </div>
+                    <ul class="welcome-slider-pagination-carousel">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <div class="welcome-slider-pagination-buttons">
+                        <input class="prev" type="image" src="assets/svg/pagination-arrow-button.svg" alt="arrow">
+                        <input class="next" type="image" src="assets/svg/pagination-arrow-button.svg" alt="arrow">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-<!--    first section, welcome-container end-->
+    <!--    first section, welcome-container end-->
 </main>
 <footer></footer>
 </body>
