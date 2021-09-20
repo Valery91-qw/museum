@@ -1,6 +1,25 @@
+@import "sass/variables";
+
 .container {
   margin: 0 auto;
   max-width: 1440px;
 
   border: 1px solid aquamarine;
+}
+.section-title {
+  font-family: $Font-heading;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 90px;
+  letter-spacing: 5px;
+  color: $Font-lite;
+  text-transform: uppercase;
+}
+.section-text {
+  font-family: $Font-text;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 33px;
+  color: $Font-lite;
+  letter-spacing: 2px;
 }
