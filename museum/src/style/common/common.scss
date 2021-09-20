@@ -1,11 +1,16 @@
 @import "sass/variables";
 
+main > section {
+  margin-bottom: 75px;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1440px;
 
   border: 1px solid aquamarine;
 }
+
 .section-title {
   font-family: $Font-heading;
   font-size: $Font-heading-size;
@@ -15,6 +20,23 @@
   color: $Font-lite;
   text-transform: uppercase;
 }
+
+.gold-title {
+  color: $Font-gold;
+}
+.underline-title {
+  position: relative;
+}
+.underline-title:after {
+  position: absolute;
+  content: '';
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: $Dark-red;
+}
+
 .section-text {
   font-family: $Font-text;
   font-size: $Font-text-size;
@@ -23,6 +45,7 @@
   color: $Font-lite;
   letter-spacing: 2px;
 }
+
 .button {
   padding: 24px 64px;
   font-family: $Font-text;
@@ -35,6 +58,7 @@
   border-radius: 10px;
   transition: 0.3s linear;
 }
+
 .button:hover {
   background-color: $Font-gold;
   transition: 0.3s linear;

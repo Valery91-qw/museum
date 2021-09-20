@@ -74,6 +74,7 @@
         .welcome-slider-pagination-carousel > li:first-child:hover {
           background-color: #9D8665;
         }
+
         .welcome-slider-pagination-buttons {
           display: flex;
         }
@@ -81,6 +82,7 @@
         .welcome-slider-pagination-buttons > input:hover {
           filter: invert(59%) sepia(5%) saturate(2051%) hue-rotate(356deg) brightness(91%) contrast(70%);
         }
+
         .welcome-slider-pagination-buttons > .next {
           margin-left: 18px;
           transform: rotate(180deg);

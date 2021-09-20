@@ -1,0 +1,10 @@
+@import "common/sass/variables";
+
+.virtual-title {
+  margin-bottom: 25px;
+}
+
+.virtual-tour-container {
+  display: flex;
+  flex-wrap: wrap;
+}
