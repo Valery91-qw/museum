@@ -1,4 +1,4 @@
-@import "./src/style/common/sass/variables.scss";
+@import "common/sass/variables";
 
 header {
   background-color: $BG-Dark;
@@ -23,13 +23,14 @@ header {
       color: rgba(255, 255, 255, 1);
     }
 
-    .logo-text {
+    .logo-title {
       margin-left: 25px;
-      font-family: $Font-to-heading;
+      font-family: $Font-heading;
       font-size: 28px;
+      font-weight: 400;
       letter-spacing: 5px;
       line-height: 31px;
-      color: $Font-white;
+      color: $Font-lite;
       text-transform: uppercase;
     }
   }
@@ -38,13 +39,28 @@ header {
 
     ul {
       display: flex;
-      color: $Font-white;
+      color: $Font-lite;
 
       li {
+        margin-left: 55px;
         list-style-type: none;
+        font-family: $Font-text;
+        font-size: 22px;
+        line-height: 26px;
+        font-weight: 200;
+        letter-spacing: 2px;
+        color: $Font-lite;
+      }
+
+      li:first-child {
+        margin-left: 0;
+      }
+
+      li > a {
+        color: inherit;
+        text-decoration: none;
       }
     }
-
   }
 }
 
