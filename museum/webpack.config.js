@@ -11,6 +11,8 @@ const devServer = (isDev) => !isDev ? {} : {
     }
 }
 
+let allHtmlFileName = ['index','tour1']
+
 module.exports = ({ dev }) => ({
     mode: dev ? 'development' : 'production',
     devtool: dev ? 'inline-source-map' : false,
@@ -50,6 +52,12 @@ module.exports = ({ dev }) => ({
         ]
     },
     plugins: [
+        ...allHtmlFileName.map(name => {
+            return new HtmlWebpackPlugin({
+                template: path.resolve(__dirname, `./src/${name}.html`),
+                filename: `${name}.html`
+            })
+        }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './src/index.html'),
             filename: 'index.html'
