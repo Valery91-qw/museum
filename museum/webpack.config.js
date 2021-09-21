@@ -11,7 +11,14 @@ const devServer = (isDev) => !isDev ? {} : {
     }
 }
 
-let allHtmlFileName = ['index','tour1']
+let allHtmlFileName = [
+    'index',
+    'tourRoyalPalace',
+    'tourDenonWing',
+    'tourColonnadePerrault',
+    'tourGreekHall',
+    'tourMonaLisa',
+    'tourNightPalace',];
 
 module.exports = ({ dev }) => ({
     mode: dev ? 'development' : 'production',

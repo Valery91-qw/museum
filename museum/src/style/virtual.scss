@@ -7,10 +7,11 @@
 .virtual-tour-container {
   display: flex;
   flex-wrap: wrap;
-
+  justify-content: space-between;
   border: 1px solid aqua;
 }
 .virtual-tour-element {
+  margin-top: 75px;
   display: block;
   text-decoration: none;
   color: #000000;
@@ -28,7 +29,7 @@
   text-transform: uppercase;
 }
 .virtual-tour-element > .virtual-tour-element-title:after {
-  width: 300px;
+  width: 70%;
   bottom: -10px;
 }
 .virtual-tour-element:hover > .virtual-tour-element-title:after {
