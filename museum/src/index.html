@@ -41,20 +41,22 @@
                 <p class="section-text">From the castle to the museum</p>
                 <button class="button">Discover the Louvre</button>
             </div>
-            <div class="welcome-slider">
-                <img class="welcome-slider-image" src="assets/img/welcome-image.jpg" alt="monna">
-                <div class="welcome-slider-pagination">
-                    <div class="welcome-slider-pagination-num">
+            <div class="welcome-carousel">
+                <div class="welcome-carousel-container">
+                    <img class="welcome-carousel-item" src="assets/img/welcome-image.jpg" alt="monna">
+                </div>
+                <div class="welcome-carousel-control">
+                    <div class="welcome-carousel-num">
                         <p class="section-text">01 | 05</p>
                     </div>
-                    <ul class="welcome-slider-pagination-carousel">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                    <ul class="welcome-carousel-pagination">
+                        <li>01</li>
+                        <li>02</li>
+                        <li>03</li>
+                        <li>04</li>
+                        <li>05</li>
                     </ul>
-                    <div class="welcome-slider-pagination-buttons">
+                    <div class="welcome-carousel-buttons">
                         <input class="prev" type="image" src="assets/svg/pagination-arrow-button.svg" alt="arrow">
                         <input class="next" type="image" src="assets/svg/pagination-arrow-button.svg" alt="arrow">
                     </div>
@@ -159,7 +161,29 @@
                     world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code
                 </p>
             </div>
-                <iframe class="video-section-frame" src="https://www.youtube.com/embed/zp1BXPX8jcU?controls=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-section-player">
+                <iframe class="video-section-frame"
+                        src="https://www.youtube.com/embed/zp1BXPX8jcU?&autoplay=1"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        loading="lazy"
+                        allowfullscreen>
+                </iframe>
+                <div class="video-section-player-items">
+                    <iframe class="video-section-player-item" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-section-player-pagination">
+                    <input class="prev" type="image" src="assets/svg/video-arrow-pagination.svg" alt="arrow"/>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <input class="next" type="image" src="assets/svg/video-arrow-pagination.svg" alt="arrow"/>
+                </div>
+            </div>
         </div>
     </section>
     <!-- video-section exd -->

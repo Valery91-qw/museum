@@ -26,12 +26,12 @@
       margin-top: 50px;
     }
 
-    .welcome-slider {
-      .welcome-slider-image {
+    .welcome-carousel {
+      .welcome-carousel-item {
         margin-bottom: 60px;
       }
 
-      .welcome-slider-pagination {
+      .welcome-carousel-control {
         display: flex;
         position: absolute;
         padding: 40px 75px;
@@ -39,52 +39,53 @@
         right: 0;
         background-color: $BG-Dark;
 
-        .welcome-slider-pagination-num {
+        .welcome-carousel-num {
           display: flex;
 
-          .welcome-slider-pagination-num > .section-text {
+          .welcome-carousel-num > .section-text {
             font-size: $Font-text-size;
             line-height: 40px;
             text-transform: uppercase;
           }
         }
 
-        .welcome-slider-pagination-carousel {
+        .welcome-carousel-pagination {
           display: flex;
           align-items: center;
           margin: 0 55px;
         }
 
-        .welcome-slider-pagination-carousel > li {
+        .welcome-carousel-pagination > li {
           margin-left: 25px;
+          font-size: 0;
           list-style: none;
         }
 
-        .welcome-slider-pagination-carousel > li:first-child {
+        .welcome-carousel-pagination > li:first-child {
           margin-left: 0;
           background-color: #D2B183;
         }
 
-        .welcome-slider-pagination-carousel > li {
+        .welcome-carousel-pagination > li {
           content: '';
           width: 16px;
           height: 16px;
           background-color: #ffffff;
         }
 
-        .welcome-slider-pagination-carousel > li:first-child:hover {
+        .welcome-carousel-pagination > li:first-child:hover {
           background-color: #9D8665;
         }
 
-        .welcome-slider-pagination-buttons {
+        .welcome-carousel-buttons {
           display: flex;
         }
 
-        .welcome-slider-pagination-buttons > input:hover {
+        .welcome-carousel-buttons > input:hover {
           filter: invert(59%) sepia(5%) saturate(2051%) hue-rotate(356deg) brightness(91%) contrast(70%);
         }
 
-        .welcome-slider-pagination-buttons > .next {
+        .welcome-carousel-buttons > .next {
           margin-left: 18px;
           transform: rotate(180deg);
         }
