@@ -1,3 +1,14 @@
 .contacts-container > h2 {
   margin-bottom: 25px;
 }
+.contacts-container-map {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.contacts-container-map-view {
+  width: 960px;
+  height: 620px;
+}
