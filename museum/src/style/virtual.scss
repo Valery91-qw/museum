@@ -10,16 +10,19 @@
   justify-content: space-between;
   border: 1px solid aqua;
 }
+
 .virtual-tour-element {
   margin-top: 75px;
   display: block;
   text-decoration: none;
   color: #000000;
 }
+
 .virtual-tour-element-image {
   width: 440px;
   height: 285px;
 }
+
 .virtual-tour-element-title {
   margin-top: 25px;
   font-family: $Font-heading;
@@ -28,14 +31,17 @@
   letter-spacing: 5px;
   text-transform: uppercase;
 }
+
 .virtual-tour-element > .virtual-tour-element-title:after {
   width: 70%;
   bottom: -10px;
 }
+
 .virtual-tour-element:hover > .virtual-tour-element-title:after {
   width: 100%;
   transition: 0.3s linear;
 }
+
 .virtual-tour-element-text {
   margin-top: 20px;
 }

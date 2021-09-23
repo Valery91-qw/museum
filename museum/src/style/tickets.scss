@@ -79,10 +79,12 @@
   background-color: #000000;
   border-radius: 50%;
 }
+
 .tickets-container-buy-form-tickets-amount {
   display: flex;
   flex-direction: column;
 }
+
 .tickets-container-buy-form-tickets-amount > h4 {
   font-family: $Font-text;
   align-self: flex-end;
@@ -91,12 +93,15 @@
   line-height: 33px;
   color: #000000;
 }
+
 .tickets-container-buy-form-tickets-amount > h4:last-child {
   margin-top: 50px;
 }
+
 .tickets-container-buy-form-tickets-amount > h4:first-child {
   margin-bottom: 25px;
 }
+
 .tickets-container-buy-form-tickets-amount-quantity > h5 {
   margin-bottom: 15px;
   font-family: $Font-text;
@@ -105,9 +110,11 @@
   line-height: 26px;
   color: #000000;
 }
+
 .tickets-container-buy-form-tickets-amount-quantity-box {
   margin-bottom: 10px;
 }
+
 .tickets-container-buy-form-tickets-amount-submit {
   position: absolute;
   right: 0;
@@ -127,10 +134,12 @@
   color: #FFFFFF;
   transition: 0.3s linear;
 }
+
 .tickets-container-buy-form-tickets-amount-submit:hover {
   background-color: #9D8665;
   transition: 0.3s linear;
 }
+
 // box for change amount tickets
 .tickets-container-buy-form-tickets-amount-quantity {
   display: inline-block;
