@@ -226,7 +226,50 @@
         <div class="container tickets-container">
             <h2 class="section-title section-title-gold underline-title">BUY TICKETS</h2>
             <div class="tickets-container-buy">
-
+                <img class="tickets-container-buy-image" src="assets/img/tickets-image.jpg" alt="tickets">
+                <form class="tickets-container-buy-form" id="buy-tickets">
+                    <fieldset class="tickets-container-buy-form-tickets-type" name="exhibition">
+                        <h4>Ticket Type</h4>
+                        <label for="permanentExhibition">Permanent exhibition
+                            <input type="radio" id="permanentExhibition" value="permanent" name="exhibition">
+                        </label>
+                        <label for="temporaryExhibition">Temporary exhibition
+                            <input type="radio" id="temporaryExhibition" value="temporary" name="exhibition">
+                        </label>
+                        <label for="combinedAdmission">Combined Admission
+                            <input type="radio" id="combinedAdmission" value="combined" name="exhibition">
+                        </label>
+                    </fieldset>
+                    <div class="tickets-container-buy-form-tickets-amount">
+                        <h4>Amount</h4>
+                        <div class="tickets-container-buy-form-tickets-amount-quantity">
+                            <h5>Basic 18+</h5>
+                            <div class="tickets-container-buy-form-tickets-amount-quantity-box">
+                                <input class="minus" type="button" value="-"
+                                       onclick="this.nextElementSibling.stepDown()">
+                                <input class="input-text" id="basic" type="number" step="1" min="0" max="" value="1"
+                                       readonly>
+                                <input class="plus" type="button" value="+"
+                                       onclick="this.previousElementSibling.stepUp()">
+                            </div>
+                        </div>
+                        <div class="tickets-container-buy-form-tickets-amount-quantity">
+                            <h5>Senior 65+</h5>
+                            <div class="tickets-container-buy-form-tickets-amount-quantity-box">
+                                <input class="minus" type="button" value="-"
+                                       onclick="this.nextElementSibling.stepDown()">
+                                <input class="input-text" id="senior" type="number" step="1" min="0" max="" value="1"
+                                       readonly>
+                                <input class="plus" type="button" value="+"
+                                       onclick="this.previousElementSibling.stepUp()">
+                            </div>
+                        </div>
+                        <h4>Total €<span>220</span></h4>
+                    </div>
+                </form>
+                <button class="tickets-container-buy-form-tickets-amount-submit" form="buy-tickets" type="submit">Buy
+                    Now
+                </button>
             </div>
         </div>
     </section>
