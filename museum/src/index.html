@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <script defer src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <link rel="icon" href="assets/svg/louvre-icon.svg">
     <title>museum</title>
 </head>
@@ -308,9 +308,60 @@
     <!-- contacts-section end -->
 </main>
 <footer class="footer">
-    <div class="container">
-        <div class="footer-container"></div>
-        <div class="footer-copyright"></div>
+    <div class="container footer-container">
+        <div class="footer-container-navigation">
+            <div class="footer-container-navigation-site">
+                <div class="logo">
+                    <div class="logo-image"></div>
+                    <h1 class="logo-title">Louvre</h1>
+                </div>
+                <nav class="navigation">
+                    <ul class="navigation-lis">
+                        <li><a href="#visiting">Visiting</a></li>
+                        <li><a href="#explore">Explore</a></li>
+                        <li><a href="#video">Video</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#tickets">Tickets</a></li>
+                        <li><a href="#contacts">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <nav class="footer-container-navigation-social">
+                <ul>
+                    <li>
+                        <a href="https://www.youtube.com/user/louvre">
+                            <img src="assets/svg/social-icons/youtube.svg" alt="pinterest">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/museelouvre/">
+                            <img src="assets/svg/social-icons/instagram.svg" alt="pinterest">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/museedulouvre">
+                            <img src="assets/svg/social-icons/facebook.svg" alt="pinterest">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://twitter.com/museelouvre">
+                            <img src="assets/svg/social-icons/twitter.svg" alt="pinterest">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.pinterest.fr/museedulouvre/">
+                            <img src="assets/svg/social-icons/pinterest.svg" alt="pinterest">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <hr class="footer-container-divider"/>
+        <div class="footer-container-copyright">
+            <p class="section-text">&copy; 2021</p>
+            <p class="section-text">The Rolling Scopes School</p>
+            <p class="section-text">Valery91-qw</p>
+        </div>
     </div>
 </footer>
 </body>
