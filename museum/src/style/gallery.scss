@@ -11,9 +11,11 @@
   height: 2125px;
   padding-top: 75px;
 }
+
 .gallery-container > h2 {
   margin-bottom: 75px;
 }
+
 .gallery-content {
   display: grid;
   grid-column-gap: 36px;
@@ -23,12 +25,15 @@
 .gallery-content-column:nth-child(1) {
   margin-top: 50px;
 }
+
 .gallery-content-column:nth-child(3) {
   margin-top: 50px;
 }
+
 .gallery-content-item {
   margin-bottom: 24px;
 }
+
 .gallery-content-shadow {
   position: absolute;
   bottom: 0;

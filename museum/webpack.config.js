@@ -13,6 +13,7 @@ const devServer = (isDev) => !isDev ? {} : {
 
 let allHtmlFileName = [
     'index',
+    'discoverTheLouvre',
     'tourRoyalPalace',
     'tourDenonWing',
     'tourColonnadePerrault',

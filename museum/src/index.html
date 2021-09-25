@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +39,7 @@
             <div class="welcome-description">
                 <h2 class="section-title">Welcome<br>to the louvre</h2>
                 <p class="section-text">From the castle to the museum</p>
-                <button class="button">Discover the Louvre</button>
+                <a class="button" href="discoverTheLouvre.html" target="_blank">Discover the Louvre</a>
             </div>
             <div class="welcome-carousel">
                 <div class="welcome-carousel-container">
@@ -59,8 +57,12 @@
                         <li>05</li>
                     </ul>
                     <div class="welcome-carousel-buttons">
-                        <input class="prev" type="image" src="assets/svg/pagination-arrow-button.svg" alt="arrow">
-                        <input class="next" type="image" src="assets/svg/pagination-arrow-button.svg" alt="arrow">
+                        <button  class="prev">
+                            <img src="assets/svg/pagination-arrow-button-prev.svg" alt="arrow">
+                        </button>
+                        <button class="next">
+                            <img src="assets/svg/pagination-arrow-button-next.svg" alt="arrow">
+                        </button>
                     </div>
                 </div>
             </div>
@@ -133,7 +135,7 @@
     <section class="section explore-section" id="explore">
         <div class="container explore-container">
             <div class="explore-container-description">
-                <h2 class="section-title underline-title">Picture explore</h2>
+                <h2 class="section-title underline-title">Picture&nbsp;explore</h2>
                 <p class="section-text">
                     Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the
                     Spanish Golden Age.
@@ -173,7 +175,7 @@
                 </iframe>
                 <div class="video-section-player-items">
                     <iframe class="video-section-player-item" src="https://www.youtube.com/embed/Vi5D6FKhRmo"
-                            title="YouTube video player" frameborder="0"
+                            title="YouTube video player"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                 </div>
@@ -252,7 +254,7 @@
                             <div class="tickets-container-buy-form-tickets-amount-quantity-box">
                                 <input class="minus" type="button" value="-"
                                        onclick="this.nextElementSibling.stepDown()">
-                                <input class="input-text" id="basic" type="number" step="1" min="0" max="" value="1"
+                                <input class="input-text" id="basic" type="number" step="1" min="0" value="1"
                                        readonly>
                                 <input class="plus" type="button" value="+"
                                        onclick="this.previousElementSibling.stepUp()">
@@ -263,7 +265,7 @@
                             <div class="tickets-container-buy-form-tickets-amount-quantity-box">
                                 <input class="minus" type="button" value="-"
                                        onclick="this.nextElementSibling.stepDown()">
-                                <input class="input-text" id="senior" type="number" step="1" min="0" max="" value="1"
+                                <input class="input-text" id="senior" type="number" step="1" min="0" value="1"
                                        readonly>
                                 <input class="plus" type="button" value="+"
                                        onclick="this.previousElementSibling.stepUp()">
@@ -280,17 +282,17 @@
     </section>
     <!-- tickets-section end -->
     <!-- parallax-section start -->
-    <section class="section parallax-section">
-
-    </section>
+    <figure class="section parallax-section">
+    </figure>
     <!-- parallax-section end -->
     <!-- contacts-section start -->
     <section class="section contacts-section" id="contacts">
         <div class="container contacts-container">
             <h2 class="section-title section-title-gold underline-title">Contacts</h2>
             <div class="contacts-container-map">
-                <address class="contacts-container-map-descriptions">
-                    <h3>Palais Royal<br/>Musee du Louvre</h3>
+                <div class="contacts-container-map-descriptions">
+                <h3>Palais Royal<br/>Musee du Louvre</h3>
+                <address>
                     <p class="section-text">address:
                         <a href="https://goo.gl/maps/r6jeaJBjwkbMw65L9" target="_blank">75001 Paris, France</a>
                     </p>
@@ -301,6 +303,7 @@
                         <a href="mailto:info@louvre.fr" target="_blank">info@louvre.fr</a>
                     </p>
                 </address>
+                </div>
                 <div class="contacts-container-map-view" id='map'></div>
             </div>
         </div>
