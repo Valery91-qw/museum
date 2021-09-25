@@ -1,12 +1,43 @@
+@import "common/sass/variables";
+
 .contacts-container > h2 {
   margin-bottom: 25px;
 }
 .contacts-container-map {
+  padding-top: 75px;
   display: flex;
   justify-content: space-between;
 }
-
-
+.contacts-container-map-descriptions > h3 {
+  margin-bottom: 50px;
+  font-family: $Font-text;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 33px;
+  color: #000000;
+}
+.contacts-container-map-descriptions > p {
+  margin-top: 25px;
+  font-family: $Font-text;
+  font-weight: 300;
+  font-style: normal;
+  font-size: $Font-text-size;
+  line-height: 26px;
+  color: #000000;
+}
+.contacts-container-map-descriptions > p > a {
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+.contacts-container-map-descriptions > p > a:hover {
+  text-decoration: underline;
+}
 
 .contacts-container-map-view {
   width: 960px;
