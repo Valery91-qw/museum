@@ -101,7 +101,6 @@
       line-height: 26px;
       font-weight: 200;
       letter-spacing: 2px;
-      color: rgba(102, 102, 102, 1);
     }
 
     li:hover {
@@ -120,6 +119,10 @@
     li > a:hover {
       text-decoration: underline;
       transition: 0.3s linear;
+    }
+
+    li > a:visited {
+      color: $Active-color;
     }
   }
 }

@@ -254,8 +254,8 @@
                             <div class="tickets-container-buy-form-tickets-amount-quantity-box">
                                 <input class="minus" type="button" value="-"
                                        onclick="this.nextElementSibling.stepDown()">
-                                <input class="input-text" id="basic" type="number" step="1" min="0" value="1"
-                                       readonly>
+                                <label for="basic"></label>
+                                <input class="input-text" id="basic" type="number" step="1" min="0" max="20" value="1" readonly>
                                 <input class="plus" type="button" value="+"
                                        onclick="this.previousElementSibling.stepUp()">
                             </div>
@@ -265,8 +265,8 @@
                             <div class="tickets-container-buy-form-tickets-amount-quantity-box">
                                 <input class="minus" type="button" value="-"
                                        onclick="this.nextElementSibling.stepDown()">
-                                <input class="input-text" id="senior" type="number" step="1" min="0" value="1"
-                                       readonly>
+                                <label for="senior"></label>
+                                <input class="input-text" id="senior" type="number" step="1" min="0" max="20" value="1" readonly>
                                 <input class="plus" type="button" value="+"
                                        onclick="this.previousElementSibling.stepUp()">
                             </div>
@@ -367,5 +367,15 @@
         </div>
     </div>
 </footer>
+<div class="container modal-window" id="modal-window">
+    <button class="modal-window-close"></button>
+    <div class="modal-window-booking">
+        <div class="modal-window-booking-header">
+            <h2 class="section-title section-title-gold">Booking tickets</h2>
+            <h3 class="underline-title">Tour to Louvre</h3>
+        </div>
+    </div>
+</div>
+<div class="modal-window-overlay" id="overlay"></div>
 </body>
 </html>
