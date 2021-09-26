@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
-    <script defer src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Forum&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel='stylesheet' href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"/>
+    <script defer src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
     <link rel="icon" href="assets/svg/louvre-icon.svg">
     <title>museum</title>
 </head>
@@ -368,11 +368,55 @@
     </div>
 </footer>
 <div class="container modal-window" id="modal-window">
-    <button class="modal-window-close"></button>
+    <input class="modal-window-close" type="image" src="./assets/svg/close-modal.svg" alt="close">
     <div class="modal-window-booking">
-        <div class="modal-window-booking-header">
-            <h2 class="section-title section-title-gold">Booking tickets</h2>
-            <h3 class="underline-title">Tour to Louvre</h3>
+        <form class="modal-window-booking-form">
+            <div class="modal-window-booking-header">
+                <img class="modal-window-booking-header-img" src="assets/svg/louvre-icon.svg" alt="icon">
+                <h2 class="section-title section-title-gold">Booking tickets</h2>
+                <h3 class="section-text underline-title">Tour to Louvre</h3>
+            </div>
+            <div class="modal-window-booking-form-date">
+                <input placeholder="Date" type="date">
+                <input type="time">
+            </div>
+            <input type="text" value="Name">
+            <input type="email" value="E-mail">
+            <input type="tel" value="Phone">
+            <select>
+                <option disabled selected hidden>Ticket Type</option>
+                <option>Permanent exhibition</option>
+                <option>Temporary exhibition</option>
+                <option>Combined Admission</option>
+            </select>
+            <div class="tickets-container-buy-form-tickets-amount">
+                <h4>Amount</h4>
+                <div class="tickets-container-buy-form-tickets-amount-quantity">
+                    <h5>Basic 18+</h5>
+                    <div class="tickets-container-buy-form-tickets-amount-quantity-box">
+                        <input class="minus" type="button" value="-"
+                               onclick="this.nextElementSibling.stepDown()">
+                        <label></label>
+                        <input class="input-text" type="number" step="1" min="0" max="20" value="1" readonly>
+                        <input class="plus" type="button" value="+"
+                               onclick="this.previousElementSibling.stepUp()">
+                    </div>
+                </div>
+                <div class="tickets-container-buy-form-tickets-amount-quantity">
+                    <h5>Senior 65+</h5>
+                    <div class="tickets-container-buy-form-tickets-amount-quantity-box">
+                        <input class="minus" type="button" value="-"
+                               onclick="this.nextElementSibling.stepDown()">
+                        <label></label>
+                        <input class="input-text" type="number" step="1" min="0" max="20" value="1" readonly>
+                        <input class="plus" type="button" value="+"
+                               onclick="this.previousElementSibling.stepUp()">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="modal-window-booking-card">
+            ds
         </div>
     </div>
 </div>

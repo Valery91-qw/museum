@@ -1,6 +1,6 @@
-.modal-window-overlay {
+@import "common/sass/variables";
 
-  /* Скрываем подложку  */
+.modal-window-overlay {
   opacity: 1;
   visibility: visible;
 
@@ -23,6 +23,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 30;
+  width: 100%;
   /*  Побочные стили   */
   box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
   text-align: center;
@@ -30,4 +31,45 @@
   border-radius: 3px;
   background-color: #fff;
   transition: 0.3s all;
+}
+.modal-window-close {
+  float: right;
+  width: 25px;
+  height: 25px;
+}
+.modal-window-booking {
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+.modal-window-booking-form {
+  display: flex;
+  flex-direction: column;
+
+  .modal-window-booking-header {
+    margin-bottom: 60px;
+    text-align: left;
+    .modal-window-booking-header-img {
+      margin-bottom: 5px;
+      width: 85px;
+      height: 41px;
+      filter: invert(85%) sepia(3%) saturate(3304%) hue-rotate(349deg) brightness(62%) contrast(104%);
+    }
+  }
+  .modal-window-booking-header > h2 {
+    font-weight: 400;
+    size: 50px;
+    line-height: 55px;
+    margin-bottom: 15px;
+  }
+  .modal-window-booking-header > h3 {
+    margin-bottom: 10px;
+    color: $Dark-red;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .modal-window-booking-header > h3:after {
+    bottom: -10px;
+  }
 }
