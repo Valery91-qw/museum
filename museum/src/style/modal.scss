@@ -32,16 +32,19 @@
   background-color: #fff;
   transition: 0.3s all;
 }
+
 .modal-window-close {
   float: right;
   width: 25px;
   height: 25px;
 }
+
 .modal-window-booking {
   padding: 60px 0;
   display: flex;
   justify-content: center;
 }
+
 .modal-window-booking-form {
   display: flex;
   flex-direction: column;
@@ -50,6 +53,7 @@
   .modal-window-booking-header {
     margin-bottom: 60px;
     text-align: left;
+
     .modal-window-booking-header-img {
       margin-bottom: 5px;
       width: 85px;
@@ -57,12 +61,14 @@
       filter: invert(85%) sepia(3%) saturate(3304%) hue-rotate(349deg) brightness(62%) contrast(104%);
     }
   }
+
   .modal-window-booking-header > h2 {
     font-weight: 400;
     size: 50px;
     line-height: 55px;
     margin-bottom: 15px;
   }
+
   .modal-window-booking-header > h3 {
     margin-bottom: 10px;
     color: $Dark-red;
@@ -70,18 +76,22 @@
     font-size: 18px;
     line-height: 21px;
   }
+
   .modal-window-booking-header > h3:after {
     bottom: -10px;
   }
+
   .modal-window-booking-form-date {
     width: 100%;
     display: flex;
     justify-content: space-between;
   }
+
   .modal-window-booking-form-date > label {
     position: relative;
     padding-bottom: 20px;
   }
+
   .modal-window-booking-form-date > label > img {
     position: absolute;
     width: 15px;
@@ -89,10 +99,12 @@
     top: 15px;
     left: 15px;
   }
+
   .modal-window-booking-form-date > label > input {
     padding: 12px 15px;
     border: 1px solid #030303;
   }
+
   .modal-window-booking-form-date > label > input:before {
     width: 100%;
     margin-left: 30px;
@@ -111,17 +123,20 @@
     background-size: 17px;
   }
 }
+
 .modal-window-booking-form > label {
   display: flex;
   margin-bottom: 20px;
   width: 100%;
   position: relative;
 }
+
 .modal-window-booking-form > label > img {
   position: absolute;
   align-self: center;
   left: 15px;
 }
+
 .modal-window-booking-form > label > input {
   width: 100%;
   padding: 15px 45px;
@@ -131,6 +146,7 @@
   color: #030303;
   border: 1px solid #030303;
 }
+
 .modal-window-booking-form > label > select {
   width: 100%;
   padding: 15px 45px;
@@ -140,15 +156,17 @@
   color: #030303;
   border: 1px solid #030303;
 }
+
 .modal-window-booking-form > label > select {
-  -moz-appearance:none;
-  -webkit-appearance:none;
-  appearance:none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
   background-image: url("./assets/svg/modal-icons/arrow.svg");
   background-repeat: no-repeat;
   background-position: calc(100% - 15px);
   border: 1px solid #030303;
 }
+
 .modal-window-booking-form > label > select > option {
   font-family: $Font-text;
   font-weight: 300;
@@ -156,4 +174,69 @@
   line-height: 21px;
   color: #030303;
   border: 1px solid black;
+}
+
+.modal-window-booking-form > .tickets-container-buy-form-tickets-amount {
+  width: 100%;
+  border: 1px solid #030303;
+  padding: 10px 15px 15px;
+}
+
+.modal-window-booking-form > .tickets-container-buy-form-tickets-amount > h4 {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: left;
+  align-self: flex-start;
+  font-family: $Font-heading;
+  color: $Font-gold;
+  text-transform: capitalize;
+}
+
+.modal-window-booking-form > .tickets-container-buy-form-tickets-amount > h4:after {
+  bottom: -5px;
+}
+
+.modal-window-booking-form {
+  .tickets-container-buy-form-tickets-amount > .tickets-container-buy-form-tickets-amount-quantity {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tickets-container-buy-form-tickets-amount > .tickets-container-buy-form-tickets-amount-quantity > h5 {
+    font-family: $Font-text;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #030303;
+  }
+
+  .tickets-container-buy-form-tickets-amount {
+    .tickets-container-buy-form-tickets-amount-quantity {
+      .tickets-container-buy-form-tickets-amount-quantity-box {
+        border: 1px solid #030303;
+        width: 105px;
+        height: 25px;
+      }
+      .tickets-container-buy-form-tickets-amount-quantity-box .input-text {
+        width: 35px;
+        height: 25px;
+        font-family: $Font-text;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: #030303;
+      }
+      .tickets-container-buy-form-tickets-amount-quantity-box .minus,
+      .tickets-container-buy-form-tickets-amount-quantity-box .plus {
+        width: 34px;
+        height: 24px;
+        line-height: 0;
+        font-size: 20px;
+        background-color: #030303;
+        color: #ffffff;
+        border: none;
+      }
+    }
+  }
 }

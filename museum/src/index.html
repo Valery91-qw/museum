@@ -379,7 +379,7 @@
             <div class="modal-window-booking-form-date">
                 <label from="date">
                     <img src="assets/svg/modal-icons/date.svg" alt="date">
-                    <input class="modal-input" id="date" type="date" placeholder="Date">
+                    <input class="modal-input" id="date" type="date" placeholder="Date" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'">
                 </label>
                 <label from="time">
                     <img src="assets/svg/modal-icons/time.svg" alt="time">
@@ -408,24 +408,22 @@
                 </select>
             </label>
             <div class="tickets-container-buy-form-tickets-amount">
-                <h4>Amount</h4>
+                <h4 class="underline-title">Entry ticket</h4>
                 <div class="tickets-container-buy-form-tickets-amount-quantity">
-                    <h5>Basic 18+</h5>
+                    <h5>Basic 18+ (20 &#8364;)</h5>
                     <div class="tickets-container-buy-form-tickets-amount-quantity-box">
                         <input class="minus" type="button" value="-"
                                onclick="this.nextElementSibling.stepDown()">
-                        <label></label>
                         <input class="input-text" type="number" step="1" min="0" max="20" value="1" readonly>
                         <input class="plus" type="button" value="+"
                                onclick="this.previousElementSibling.stepUp()">
                     </div>
                 </div>
                 <div class="tickets-container-buy-form-tickets-amount-quantity">
-                    <h5>Senior 65+</h5>
+                    <h5>Senior 65+ (10 &#8364;)</h5>
                     <div class="tickets-container-buy-form-tickets-amount-quantity-box">
                         <input class="minus" type="button" value="-"
                                onclick="this.nextElementSibling.stepDown()">
-                        <label></label>
                         <input class="input-text" type="number" step="1" min="0" max="20" value="1" readonly>
                         <input class="plus" type="button" value="+"
                                onclick="this.previousElementSibling.stepUp()">
