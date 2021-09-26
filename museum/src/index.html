@@ -377,18 +377,36 @@
                 <h3 class="section-text underline-title">Tour to Louvre</h3>
             </div>
             <div class="modal-window-booking-form-date">
-                <input placeholder="Date" type="date">
-                <input type="time">
+                <label from="date">
+                    <img src="assets/svg/modal-icons/date.svg" alt="date">
+                    <input class="modal-input" id="date" type="date" placeholder="Date">
+                </label>
+                <label from="time">
+                    <img src="assets/svg/modal-icons/time.svg" alt="time">
+                    <input class="modal-input" id="time" type="time" placeholder="Time">
+                </label>
             </div>
-            <input type="text" value="Name">
-            <input type="email" value="E-mail">
-            <input type="tel" value="Phone">
-            <select>
-                <option disabled selected hidden>Ticket Type</option>
-                <option>Permanent exhibition</option>
-                <option>Temporary exhibition</option>
-                <option>Combined Admission</option>
-            </select>
+            <label from="name">
+                <img src="assets/svg/modal-icons/name.svg" alt="name">
+                <input class="modal-input" id="name" type="text" value="Name">
+            </label>
+            <label from="email">
+                <img src="assets/svg/modal-icons/email.svg" alt="email">
+                <input class="modal-input" id="email" type="email" value="Email">
+            </label>
+            <label from="tel">
+                <img src="assets/svg/modal-icons/tel.svg" alt="tel">
+                <input class="modal-input" id="tel" type="tel" value="Phone">
+            </label>
+            <label from="type">
+                <img src="assets/svg/modal-icons/type.svg" alt="type">
+                <select id="type" name="type">
+                    <option value="" disabled selected hidden>Ticket Type</option>
+                    <option value="permanent">Permanent exhibition</option>
+                    <option value="temporary">Temporary exhibition</option>
+                    <option value="combined">Combined Admission</option>
+                </select>
+            </label>
             <div class="tickets-container-buy-form-tickets-amount">
                 <h4>Amount</h4>
                 <div class="tickets-container-buy-form-tickets-amount-quantity">
