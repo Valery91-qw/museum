@@ -11,7 +11,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, .5);
   z-index: 20;
-  transition: .3s all;
+  transition: all .3s linear;
 }
 
 .modal-window {
@@ -30,11 +30,13 @@
   padding: 30px;
   border-radius: 3px;
   background-color: #fff;
-  transition: 0.3s all;
+  transition: all 0.3s linear;
 }
 
 .modal-window-close {
-  float: right;
+  position: absolute;
+  top: 30px;
+  right: 30px;
   width: 25px;
   height: 25px;
 }
@@ -89,9 +91,12 @@
 
   .modal-window-booking-form-date > label {
     position: relative;
+    flex-grow: 1;
     padding-bottom: 20px;
   }
-
+  .modal-window-booking-form-date > label:last-child {
+    margin-left: 20px;
+  }
   .modal-window-booking-form-date > label > img {
     position: absolute;
     width: 15px;
@@ -102,6 +107,7 @@
 
   .modal-window-booking-form-date > label > input {
     padding: 12px 15px;
+    width: 100%;
     border: 1px solid #030303;
   }
 
@@ -228,7 +234,6 @@
         height: 25px;
       }
       .tickets-container-buy-form-tickets-amount-quantity-box .input-text {
-        width: 35px;
         height: 25px;
         font-family: $Font-text;
         font-weight: 400;
@@ -354,5 +359,6 @@
     padding: 10px 85px;
     font-size: 22px;
     line-height: 26px;
+
   }
 }
