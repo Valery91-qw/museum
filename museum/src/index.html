@@ -370,9 +370,9 @@
     </div>
 </footer>
 <div class="container modal-window" id="modal-window">
-    <input class="modal-window-close" type="image" src="./assets/svg/close-modal.svg" alt="close">
+    <input class="modal-window-close" id="modal-close" type="image" src="./assets/svg/close-modal.svg" alt="close">
     <div class="modal-window-booking">
-        <form class="modal-window-booking-form">
+        <form class="modal-window-booking-form" id="payment-tickets">
             <div class="modal-window-booking-header">
                 <img class="modal-window-booking-header-img" src="assets/svg/louvre-icon.svg" alt="icon">
                 <h2 class="section-title section-title-gold modal-title">Booking&nbsp;tickets</h2>
@@ -466,8 +466,11 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="modal-window-booking-card-payment">
+            <div class="modal-window-booking-card-payment">
+                <img class="avers" src="assets/img/modal-window/avers-cart.jpg" alt="card avers">
+                <img class="revers" src="assets/img/modal-window/revers-cart.jpg" alt="card revers">
+            </div>
+            <button class="button submit" type="submit" form="payment-tickets">Book</button>
         </div>
     </div>
 </div>

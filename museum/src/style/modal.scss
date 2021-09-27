@@ -1,8 +1,8 @@
 @import "common/sass/variables";
 
 .modal-window-overlay {
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
 
   position: fixed;
   top: 0;
@@ -15,8 +15,8 @@
 }
 
 .modal-window {
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
 
   position: fixed;
   top: 50%;
@@ -241,6 +241,7 @@
   }
 }
 .modal-window-booking-card {
+  position: relative;
   max-width: 530px;
   width: 100%;
   padding: 25px 30px;
@@ -316,5 +317,33 @@
   .modal-window-booking-card-preview-total-price > hr {
     margin: 10px 0;
     border-top: 2px solid #740C11;
+  }
+  .modal-window-booking-card-payment {
+    display: flex;
+    width: 100%;
+    position: relative;
+    .avers {
+      top: 0;
+      left: 0;
+      z-index: 3;
+    }
+    .revers {
+      top: 30px;
+      right: 0;
+      z-index: 2;
+    }
+  }
+  .modal-window-booking-card-payment > img {
+    margin-top: 10px;
+    position: absolute;
+  }
+  .submit {
+    position: absolute;
+    right: 30px;
+    bottom: 25px;
+    border-radius: 0;
+    padding: 10px 85px;
+    font-size: 22px;
+    line-height: 26px;
   }
 }
