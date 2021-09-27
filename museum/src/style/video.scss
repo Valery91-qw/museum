@@ -29,19 +29,17 @@
   display: flex;
   justify-content: center;
 }
-
-.video-section-player-pagination > input[type='image']:hover {
-  filter: invert(13%) sepia(31%) saturate(6085%) hue-rotate(350deg) brightness(93%) contrast(104%);
+.video-section-player-pagination > button {
+  border: none;
+  background: none;
 }
-
-.video-section-player-pagination > .prev {
-  transform: rotate(180deg);
+.video-section-player-pagination > button:hover {
+  filter: brightness(0) saturate(100%) invert(16%) sepia(33%) saturate(5449%) hue-rotate(352deg) brightness(75%) contrast(117%);
 }
 
 .video-section-player-pagination > ul {
   margin: 0 20px;
   display: flex;
-  align-items: center;
 }
 
 .video-section-player-pagination > ul > li {
