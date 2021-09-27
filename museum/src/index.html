@@ -57,7 +57,7 @@
                         <li>05</li>
                     </ul>
                     <div class="welcome-carousel-buttons">
-                        <button  class="prev">
+                        <button class="prev">
                             <img src="assets/svg/pagination-arrow-button-prev.svg" alt="arrow">
                         </button>
                         <button class="next">
@@ -255,7 +255,8 @@
                                 <input class="minus" type="button" value="-"
                                        onclick="this.nextElementSibling.stepDown()">
                                 <label for="basic"></label>
-                                <input class="input-text" id="basic" type="number" step="1" min="0" max="20" value="1" readonly>
+                                <input class="input-text" id="basic" type="number" step="1" min="0" max="20" value="1"
+                                       readonly>
                                 <input class="plus" type="button" value="+"
                                        onclick="this.previousElementSibling.stepUp()">
                             </div>
@@ -266,7 +267,8 @@
                                 <input class="minus" type="button" value="-"
                                        onclick="this.nextElementSibling.stepDown()">
                                 <label for="senior"></label>
-                                <input class="input-text" id="senior" type="number" step="1" min="0" max="20" value="1" readonly>
+                                <input class="input-text" id="senior" type="number" step="1" min="0" max="20" value="1"
+                                       readonly>
                                 <input class="plus" type="button" value="+"
                                        onclick="this.previousElementSibling.stepUp()">
                             </div>
@@ -291,18 +293,18 @@
             <h2 class="section-title section-title-gold underline-title">Contacts</h2>
             <div class="contacts-container-map">
                 <div class="contacts-container-map-descriptions">
-                <h3>Palais Royal<br/>Musee du Louvre</h3>
-                <address>
-                    <p class="section-text">address:
-                        <a href="https://goo.gl/maps/r6jeaJBjwkbMw65L9" target="_blank">75001 Paris, France</a>
-                    </p>
-                    <p class="section-text">phone:
-                        <a href="tel:+330140205050">+33(0) 1 40 20 50 50</a>
-                    </p>
-                    <p class="section-text">mail:
-                        <a href="mailto:info@louvre.fr" target="_blank">info@louvre.fr</a>
-                    </p>
-                </address>
+                    <h3>Palais Royal<br/>Musee du Louvre</h3>
+                    <address>
+                        <p class="section-text">address:
+                            <a href="https://goo.gl/maps/r6jeaJBjwkbMw65L9" target="_blank">75001 Paris, France</a>
+                        </p>
+                        <p class="section-text">phone:
+                            <a href="tel:+330140205050">+33(0) 1 40 20 50 50</a>
+                        </p>
+                        <p class="section-text">mail:
+                            <a href="mailto:info@louvre.fr" target="_blank">info@louvre.fr</a>
+                        </p>
+                    </address>
                 </div>
                 <div class="contacts-container-map-view" id='map'></div>
             </div>
@@ -373,13 +375,14 @@
         <form class="modal-window-booking-form">
             <div class="modal-window-booking-header">
                 <img class="modal-window-booking-header-img" src="assets/svg/louvre-icon.svg" alt="icon">
-                <h2 class="section-title section-title-gold">Booking tickets</h2>
+                <h2 class="section-title section-title-gold modal-title">Booking&nbsp;tickets</h2>
                 <h3 class="section-text underline-title">Tour to Louvre</h3>
             </div>
             <div class="modal-window-booking-form-date">
                 <label from="date">
                     <img src="assets/svg/modal-icons/date.svg" alt="date">
-                    <input class="modal-input" id="date" type="date" placeholder="Date" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'">
+                    <input class="modal-input" id="date" type="date" placeholder="Date" onfocus="(this.type='date')"
+                           onblur="if(!this.value)this.type='text'">
                 </label>
                 <label from="time">
                     <img src="assets/svg/modal-icons/time.svg" alt="time">
@@ -432,7 +435,39 @@
             </div>
         </form>
         <div class="modal-window-booking-card">
-            ds
+            <div class="modal-window-booking-card-preview">
+                <h5>Overview</h5>
+                <h6>Tour to Louvre</h6>
+                <ul>
+                    <li>
+                        <img src="assets/svg/modal-icons/date.svg" alt="date">Friday, August 19
+                    </li>
+                    <li>
+                        <img src="assets/svg/modal-icons/time.svg" alt="time">16 : 30
+                    </li>
+                    <li>
+                        <img src="assets/svg/modal-icons/check_circle_outline.svg" alt="check circle">
+                        Temporary exhibition
+                    </li>
+                </ul>
+                <div class="modal-window-booking-card-preview-total-price">
+                    <div>
+                        <p><span class="total-amount">2</span> Basic (20 &#8364;)</p>
+                        <p><span>40</span> &#8364;</p>
+                    </div>
+                    <div>
+                        <p><span class="total-amount">2</span> Senior (10 &#8364;)</p>
+                        <p><span>20</span> &#8364;</p>
+                    </div>
+                    <hr>
+                    <div>
+                        <p>Total:</p>
+                        <p><span>60</span> &#8364;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-window-booking-card-payment">
         </div>
     </div>
 </div>

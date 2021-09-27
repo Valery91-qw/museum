@@ -46,6 +46,7 @@
 }
 
 .modal-window-booking-form {
+  min-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -55,16 +56,15 @@
     text-align: left;
 
     .modal-window-booking-header-img {
-      margin-bottom: 5px;
       width: 85px;
       height: 41px;
       filter: invert(85%) sepia(3%) saturate(3304%) hue-rotate(349deg) brightness(62%) contrast(104%);
     }
   }
 
-  .modal-window-booking-header > h2 {
+  .modal-window-booking-header > .modal-title {
     font-weight: 400;
-    size: 50px;
+    font-size: 50px;
     line-height: 55px;
     margin-bottom: 15px;
   }
@@ -238,5 +238,83 @@
         border: none;
       }
     }
+  }
+}
+.modal-window-booking-card {
+  max-width: 530px;
+  width: 100%;
+  padding: 25px 30px;
+  margin-left: 40px;
+  border: 1px solid #030303;
+  .modal-window-booking-card-preview {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-image: url("./assets/svg/modal-icons/modal-image.jpg");
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 150px 120px;
+  }
+  .modal-window-booking-card-preview > h5 {
+    font-family: $Font-text;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
+    color: #272727;
+  }
+  .modal-window-booking-card-preview > h6 {
+    margin-bottom: 10px;
+    font-family: $Font-text;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #740C11;
+    opacity: 0.9;
+  }
+  .modal-window-booking-card-preview > ul > li {
+    margin-bottom: 5px;
+    text-align: left;
+    list-style-type: none;
+    font-family: $Font-text;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: #030303;
+  }
+  .modal-window-booking-card-preview > ul > li > img {
+    margin-right: 15px;
+  }
+  .modal-window-booking-card-preview-total-price {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .modal-window-booking-card-preview-total-price > div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .modal-window-booking-card-preview-total-price > div > p {
+    font-family: $Font-text;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 25px;
+    color: #030303;
+  }
+  .modal-window-booking-card-preview-total-price {
+    .total-amount {
+      margin-right: 10px;
+      display: inline-block;
+      width: 32px;
+      height: 20px;
+      font-size: 18px;
+      line-height: 21px;
+      color: #A4A4A3;
+      background-color: #030303;
+      border-radius: 5px;
+    }
+  }
+  .modal-window-booking-card-preview-total-price > hr {
+    margin: 10px 0;
+    border-top: 2px solid #740C11;
   }
 }
