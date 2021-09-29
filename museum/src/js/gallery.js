@@ -19,10 +19,10 @@ const gallery = document.getElementById('gallery-content');
 const allImage = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15]
 
 function random() {
+
     function shuffle(array) {
         array.sort(() => Math.random() - 0.5);
     }
-
     shuffle(allImage)
 
     gallery.innerHTML = allImage.map(el => `<img class="gallery-content-item" src="${el}" alt="img">`)

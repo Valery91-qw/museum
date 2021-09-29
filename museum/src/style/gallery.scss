@@ -21,14 +21,8 @@
   flex-direction: column;
   flex-wrap: wrap;
   max-height: 2900px;
-  padding-top: 50px;
 }
-.gallery-content > img:first-child {
-  padding-top: -50px;
-}
-.gallery-content > img:nth-child(10) {
-  padding-top: -50px;
-}
+
 .gallery-content-item {
   margin-bottom: 24px;
   margin-right: 24px;
