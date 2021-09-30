@@ -4,98 +4,90 @@
   background-color: $BG-Dark;
 
   .welcome-container {
-    display: flex;
     position: relative;
-    width: 100%;
-    justify-content: end;
+    height: 810px;
 
     .welcome-description {
       position: absolute;
+      display: block;
       top: 150px;
       left: 0;
-    }
+      z-index: 1;
 
-    .welcome-description > p {
-      font-size: 28px;
-      line-height: 33px;
-      padding: 25px 0;
-      letter-spacing: 2px;
-    }
-
-    .welcome-description > a {
-      margin-top: 50px;
-      display: inline-block;
-      text-decoration: none;
-    }
-
-    .welcome-carousel {
-      .welcome-carousel-item {
-        margin-bottom: 60px;
+      .welcome-description-text {
+        margin-top: 25px;
       }
 
-      .welcome-carousel-control {
-        display: flex;
-        position: absolute;
-        padding: 40px 75px;
-        bottom: 0;
-        right: 0;
-        background-color: $BG-Dark;
+      .welcome-description-link {
+        display: inline-block;
+        margin-top: 75px;
+      }
+    }
+    .welcome-carousel {
+      position: absolute;
+      left: 440px;
+      .welcome-carousel-items {
+        position: relative;
+        overflow: hidden;
 
-        .welcome-carousel-num {
-          display: flex;
-
-          .welcome-carousel-num > .section-text {
-            font-size: $Font-text-size;
-            line-height: 40px;
-            text-transform: uppercase;
+        .welcome-carousel-item {
+          display: none;
+          animation: 0.5s ease-in-out;
+        }
+        .active,
+        .next {
+          display: block;
+        }
+        .next {
+          position: absolute;
+          top: 0;
+          width: 100%;
+        }
+        .to-left {
+          animation-name: left;
+        }
+        .to-right {
+          animation-name: right;
+        }
+        .from-left {
+          animation-name: left;
+          animation-direction: reverse;
+        }
+        .from-right {
+          animation-name: right;
+          animation-direction: reverse;
+        }
+        @keyframes left {
+          from {
+            left: 0;
+          }
+          to {
+            left: 100%;
           }
         }
-
-        .welcome-carousel-pagination {
+        @keyframes right {
+          from {
+            right: 0;
+          }
+          to {
+            right: 100%;
+          }
+        }
+      }
+      .welcome-carousel-controls {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        right: 0;
+        ul {
           display: flex;
-          align-items: center;
-          margin: 0 55px;
+          background-color: white;
         }
-
-        .welcome-carousel-pagination > li {
-          margin-left: 25px;
-          font-size: 0;
-          list-style: none;
+        .welcome-carousel-controls-display {
+          background-color: white;
         }
-
-        .welcome-carousel-pagination > li:first-child {
-          margin-left: 0;
-          background-color: #D2B183;
-        }
-
-        .welcome-carousel-pagination > li {
-          content: '';
-          width: 16px;
-          height: 16px;
-          background-color: #ffffff;
-        }
-
-        .welcome-carousel-pagination > li:first-child:hover {
-          background-color: $Hover-color;
-        }
-
-        .welcome-carousel-buttons {
-          display: flex;
-        }
-        .welcome-carousel-buttons > button {
-          border: none;
-          background: none;
-        }
-
-        .welcome-carousel-buttons > button:hover {
-          filter: invert(59%) sepia(5%) saturate(2051%) hue-rotate(356deg) brightness(91%) contrast(70%);
-        }
-
-        .welcome-carousel-buttons > .next {
-          margin-left: 18px;
-        }
-
       }
     }
+
   }
 }
