@@ -4,7 +4,7 @@ import "./js/mapbox"
 import "./js/modal"
 import "./js/gallery"
 import "./js/welcome-carousel"
-
+import "./js/burger"
 
 const formBuyTickets = document.getElementById('buy-tickets');
 

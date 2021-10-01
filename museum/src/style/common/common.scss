@@ -9,6 +9,7 @@
   max-width: 1440px;
   @media (max-width: 1450px) {
     max-width: 1024px;
+    padding: 0 20px;
   }
 }
 
@@ -60,6 +61,11 @@
   background-color: $Dark-red;
   border-radius: 10px;
   transition: 0.3s linear;
+  @media (max-width: 1450px) {
+    line-height: 23px;
+    font-size: 20px;
+    padding: 18px 45px;
+  }
 }
 
 .button:hover {
@@ -128,5 +134,8 @@
     li > a:visited {
       color: $Active-color;
     }
+  }
+  @media (max-width: 1450px) {
+    display: none;
   }
 }

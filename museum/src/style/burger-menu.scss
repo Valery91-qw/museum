@@ -1,0 +1,33 @@
+.burger-menu {
+  display: none;
+  @media (max-width: 1450px) {
+    display: flex;
+    flex-direction: column;
+  }
+  button {
+    position: relative;
+    width: 32px;
+    height: 2px;
+    border: none;
+    background-color: #ffffff;
+  }
+  button:before {
+    position: absolute;
+    content: '';
+    top: 6px;
+    left: 0;
+    width: 32px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+  button:after {
+    position: absolute;
+    content: '';
+    top: -6px;
+    left: 0;
+    width: 32px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+}
+

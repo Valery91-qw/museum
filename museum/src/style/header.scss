@@ -5,8 +5,12 @@ header {
 }
 
 .header-container {
+  position: relative;
   height: 150px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 1450px) {
+    height: 130px;
+  }
 }

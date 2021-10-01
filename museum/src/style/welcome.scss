@@ -7,6 +7,9 @@
     position: relative;
     height: 810px;
 
+    @media (max-width: 1450px) {
+      height: 585px;
+    }
     .welcome-description {
       position: absolute;
       display: block;
@@ -15,12 +18,16 @@
       left: 0;
       bottom: 0;
       z-index: 2;
-
+      @media (max-width: 1450px) {
+        padding-top: 50px;
+        left: 20px;
+      }
       .welcome-description-title {
-        font-family: $Font-heading;
-        font-size: 80px;
         line-height: 90px;
         letter-spacing: 5px;
+        @media (max-width: 1450px) {
+          font-size: 50px;
+        }
       }
 
       .welcome-description-text {
@@ -30,22 +37,34 @@
         font-size: 28px;
         line-height: 33px;
         letter-spacing: 2px;
+        @media (max-width: 1450px) {
+          font-size: 24px;
+        }
       }
 
       .welcome-description-link {
         display: inline-block;
         margin-top: 75px;
+        @media (max-width: 1450px) {
+          margin-top: 50px;
+        }
       }
     }
 
     .welcome-carousel {
       position: absolute;
       left: 440px;
-
+      @media (max-width: 1450px) {
+        top: 0;
+        bottom: 0;
+        left: 304px;
+      }
       .welcome-carousel-items {
         position: relative;
         overflow: hidden;
-
+        @media (max-width: 1450px) {
+          margin-right: 20px;
+        }
         .welcome-carousel-items-shadow {
           position: absolute;
           top: 0;
@@ -120,11 +139,17 @@
         justify-content: space-between;
         right: 0;
         background-color: $BG-Dark;
-
+        @media (max-width: 1450px) {
+          bottom: 0;
+          left: 0;
+          justify-content: flex-end;
+        }
         ul {
           display: flex;
           margin: 0 55px;
-
+          @media (max-width: 1450px) {
+            margin: 0 45px;
+          }
           li {
             list-style-type: none;
             font-size: 0;
@@ -133,6 +158,10 @@
             height: 16px;
             background-color: #ffffff;
             margin-right: 25px;
+            @media (max-width: 1450px) {
+              width: 14px;
+              height: 14px;
+            }
           }
 
           li:last-child {
@@ -154,6 +183,9 @@
           line-height: 40px;
           text-transform: uppercase;
           color: #ffffff;
+          @media (max-width: 1450px) {
+            font-size: 20px;
+          }
         }
         .welcome-carousel-controls-buttons {
           button {
