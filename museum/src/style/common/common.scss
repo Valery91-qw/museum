@@ -2,6 +2,9 @@
 
 .section {
   margin-bottom: 75px;
+  @media (max-width: 1450px) {
+    margin-bottom: 60px;
+  }
 }
 
 .container {

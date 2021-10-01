@@ -2,12 +2,19 @@
 
 .virtual-title {
   margin-bottom: 25px;
+  @media (max-width: 1450px) {
+    margin-bottom: 20px;
+    font-size: 50px;
+  }
 }
 
 .virtual-tour-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  @media (max-width: 1450px) {
+    justify-content: space-around;
+  }
 }
 
 .virtual-tour-element {
@@ -15,11 +22,18 @@
   display: block;
   text-decoration: none;
   color: #000000;
+  @media (max-width: 1450px) {
+    margin-top: 60px;
+  }
 }
 
 .virtual-tour-element-image {
   width: 440px;
   height: 285px;
+  @media (max-width: 1450px) {
+    width: 330px;
+    height: 215px;
+  }
 }
 
 .virtual-tour-element-title {
@@ -29,11 +43,19 @@
   line-height: 35px;
   letter-spacing: 5px;
   text-transform: uppercase;
+  @media (max-width: 1450px) {
+    font-size: 28px;
+    line-height: 30px;
+    letter-spacing: 3px;
+  }
 }
 
 .virtual-tour-element > .virtual-tour-element-title:after {
   width: 70%;
   bottom: -10px;
+  @media (max-width: 1450px) {
+    width: 45%;
+  }
 }
 
 .virtual-tour-element:hover > .virtual-tour-element-title:after {
@@ -48,4 +70,8 @@
 .virtual-tour-element-text > .section-text {
   color: inherit;
   font-size: 18px;
+  @media (max-width: 1450px) {
+    margin-top: 10px;
+    line-height: 23px;
+  }
 }
