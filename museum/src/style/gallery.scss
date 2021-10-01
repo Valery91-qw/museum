@@ -10,10 +10,19 @@
   position: relative;
   height: 2125px;
   padding-top: 75px;
+  @media (max-width: 1450px) {
+    padding-top: 60px;
+    height: 1900px;
+  }
 }
 
 .gallery-container > h2 {
   margin-bottom: 75px;
+  @media (max-width: 1450px) {
+    font-size: 50px;
+    line-height: 75px;
+    margin-bottom: 60px;
+  }
 }
 
 .gallery-content {
@@ -21,11 +30,17 @@
   flex-direction: column;
   flex-wrap: wrap;
   max-height: 2900px;
+  @media (max-width: 1450px) {
+    max-height: 1900px;
+  }
 }
 
 .gallery-content-item {
   margin-bottom: 24px;
   margin-right: 24px;
+  @media (max-width: 1450px) {
+    width: 30%;
+  }
 }
 
 .gallery-content-shadow {
