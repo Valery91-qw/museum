@@ -14,7 +14,7 @@
       top: 0;
       left: 0;
       bottom: 0;
-      z-index: 1;
+      z-index: 2;
 
       .welcome-description-title {
         font-family: $Font-heading;
@@ -45,6 +45,16 @@
       .welcome-carousel-items {
         position: relative;
         overflow: hidden;
+
+        .welcome-carousel-items-shadow {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 50%;
+          background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+          z-index: 1;
+        }
 
         .welcome-carousel-item {
           display: none;
