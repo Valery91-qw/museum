@@ -7,8 +7,8 @@ let currentItem = 0;
 let isEnabled = true;
 
 ul.addEventListener('click', function (event) {
-    if(event.target.tagName === "LI") {
-        if(event.target.classList.contains('active')) {
+    if (event.target.tagName === "LI") {
+        if (event.target.classList.contains('active')) {
             return
         }
         nextItem(event.target.innerText - 2)

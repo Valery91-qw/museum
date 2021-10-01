@@ -24,5 +24,9 @@
 }
 
 .explore-container-image {
+  display: inline-flex;
   padding-top: 15px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
