@@ -43,6 +43,9 @@
   right: 0;
   height: 3px;
   background-color: $Dark-red;
+  @media (max-width: 1450px) {
+    bottom: -20px;
+  }
 }
 
 .section-text {
