@@ -2,12 +2,21 @@
 
 .contacts-container > h2 {
   margin-bottom: 25px;
+  @media (max-width: 1450px) {
+    margin-bottom: 20px;
+    font-size: 50px;
+    line-height: 75px;
+
+  }
 }
 
 .contacts-container-map {
   padding-top: 75px;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 1450px) {
+    padding-top: 60px;
+  }
 }
 
 .contacts-container-map-descriptions > h3 {
@@ -18,6 +27,11 @@
   font-size: 28px;
   line-height: 33px;
   color: #000000;
+  @media (max-width: 1450px) {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 35px;
+  }
 }
 
 .contacts-container-map-descriptions > address > p {
@@ -28,6 +42,11 @@
   font-size: $Font-text-size;
   line-height: 26px;
   color: #000000;
+  @media (max-width: 1450px) {
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 15px;
+  }
 }
 
 .contacts-container-map-descriptions > address > p > a {
@@ -47,4 +66,8 @@
 .contacts-container-map-view {
   width: 960px;
   height: 620px;
+  @media (max-width: 1450px) {
+    width: 694px;
+    height: 454px;
+  }
 }

@@ -26,6 +26,11 @@
 .footer-container-navigation-site > nav {
   margin-left: 145px;
   margin-bottom: 25px;
+  @media (max-width: 1450px) {
+    display: flex;
+    margin-left: 45px;
+    margin-bottom: 50px;
+  }
 }
 
 .footer-container-navigation-site > nav > ul {
@@ -38,6 +43,9 @@
   margin-left: 0;
   margin-right: 150px;
   margin-bottom: 25px;
+  @media (max-width: 1450px) {
+    margin-right: 100px;
+  }
 }
 
 .footer-container-navigation-social {
