@@ -1,3 +1,5 @@
+@import "common/sass/variables";
+
 .burger-menu {
   display: none;
   @media (max-width: 1450px) {
@@ -30,4 +32,43 @@
     background-color: #ffffff;
   }
 }
+.burger-list.visible {
+  display: block;
+  left: 0;
+}
+.burger-list {
+  //display: none;
+  position: absolute;
+  left: -300px;
+  top: 130px;
+  padding: 10px 120px 287px 55px;
+  z-index: 500;
+  background-color: $BG-Dark;
+  transition: left 0.5s linear;
+}
 
+.burger-list > li {
+  position: relative;
+  list-style-type: none;
+  margin-top: 25px;
+  font-family: $Font-text;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 23px;
+  letter-spacing: 2px;
+
+}
+.burger-list > li > a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.burger-list > li:after {
+  position: absolute;
+  content: '';
+  top: 7px;
+  right: -28px;
+  width: 7px;
+  height: 12px;
+  background-image: url("./assets/svg/burger-menu-arrow.svg");
+  background-size: cover;
+}

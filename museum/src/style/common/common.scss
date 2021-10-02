@@ -92,6 +92,9 @@
     background-repeat: no-repeat;
     background-size: auto;
     color: $Font-lite;
+    @media (max-width: 730px) {
+      background-size: 30px;
+    }
   }
 
   .logo-title {
@@ -104,6 +107,11 @@
     line-height: 31px;
     color: $Font-lite;
     text-transform: uppercase;
+    @media (max-width: 730px) {
+      font-size: 16px;
+      margin-left: 20px;
+      line-height: 18px;
+    }
   }
 }
 
