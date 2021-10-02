@@ -16,6 +16,9 @@
   padding-top: 75px;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 920px) {
+    padding-top: 40px;
+  }
 }
 
 .footer-container-navigation-site {
@@ -30,6 +33,10 @@
     display: flex;
     margin-left: 45px;
     margin-bottom: 50px;
+  }
+  @media (max-width: 920px) {
+    margin-left: 80px;
+    margin-bottom: 130px;
   }
 }
 
@@ -46,10 +53,21 @@
   @media (max-width: 1450px) {
     margin-right: 100px;
   }
+  @media (max-width: 920px) {
+    margin-right: 185px;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 2px;
+  }
 }
 
 .footer-container-navigation-social {
   align-self: center;
+  @media (max-width: 920px) {
+    position: absolute;
+    right: 110px;
+    bottom: 200px;
+  }
 }
 
 .footer-container-navigation-social > ul {

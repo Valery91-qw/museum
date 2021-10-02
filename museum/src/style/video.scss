@@ -4,6 +4,9 @@
   @media (max-width: 1450px) {
     margin-bottom: 40px;
   }
+  @media (max-width: 920px) {
+    margin-bottom: 20px;
+  }
 }
 
 .video-section-description > .section-text {
@@ -20,6 +23,12 @@
     line-height: 75px;
   }
 }
+@media (max-width: 920px) {
+  .video-section-description > h2 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
 .video-section-frame {
   border: none;
   position: relative;
@@ -28,10 +37,16 @@
   @media (max-width: 1450px) {
     height: 540px;
   }
+  @media (max-width: 920px) {
+    height: 386px;
+  }
 }
 
 .video-section-player-items {
   margin: 40px 0;
+  @media (max-width: 920px) {
+    margin: 20px 0;
+  }
 }
 
 .video-section-player-item {
@@ -42,11 +57,18 @@
     width: 300px;
     height: 170px;
   }
+  @media (max-width: 920px) {
+    width: 354px;
+    height: 200px;
+  }
 }
 
 .video-section-player-pagination {
   display: flex;
   justify-content: center;
+  @media (max-width: 920px) {
+    padding-bottom: 40px;
+  }
 }
 .video-section-player-pagination > button {
   border: none;
@@ -69,6 +91,10 @@
   height: 12px;
   background-color: #999999;
   border-radius: 5px;
+  @media (max-width: 920px) {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 .video-section-player-pagination > ul > li:hover {

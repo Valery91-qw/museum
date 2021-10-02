@@ -11,6 +11,9 @@
     padding: 60px;
     flex-direction: column;
   }
+  @media (max-width: 920px) {
+    padding: 40px 20px;
+  }
 }
 .explore-container-description {
   margin-right: 60px;
@@ -25,6 +28,11 @@
     font-size: 50px;
     line-height: 75px;
   }
+  @media (max-width: 920px) {
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 0;
+  }
 }
 
 .explore-container-description > p {
@@ -33,6 +41,10 @@
     margin-bottom: 0;
     font-size: 20px;
     line-height: 38px;
+  }
+  @media (max-width: 920px) {
+    display: none;
+    margin-bottom: 0;
   }
 }
 @media (max-width: 1450px) {
@@ -56,5 +68,8 @@
     width: 720px;
     height: 700px;
     margin: 0 auto;
+  }
+  @media (max-width: 920px) {
+    width: 100%;
   }
 }
