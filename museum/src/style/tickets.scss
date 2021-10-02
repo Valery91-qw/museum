@@ -11,6 +11,10 @@
     font-size: 40px;
     line-height: 60px;
   }
+  @media (max-width: 730px) {
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
 
 .tickets-container-buy {
@@ -31,6 +35,13 @@
     .tickets-container-buy-image {
       width: 445px;
       height: 340px;
+    }
+  }
+  @media (max-width: 730px) {
+    flex-direction: column;
+    .tickets-container-buy-image {
+      width: 380px;
+      height: 160px;
     }
   }
 }
@@ -134,6 +145,12 @@
   @media (max-width: 1450px) {
     align-self: flex-start;
   }
+  @media (max-width: 730px) {
+    align-self: center;
+    margin-top: 40px;
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .tickets-container-buy-form-tickets-amount > h4:last-child {
@@ -144,12 +161,18 @@
   @media (max-width: 920px) {
     margin-top: 10px;
   }
+  @media (max-width: 730px) {
+    margin-top: 10px;
+  }
 }
 
 .tickets-container-buy-form-tickets-amount > h4:first-child {
   margin-bottom: 25px;
   @media (max-width: 920px) {
     margin-bottom: 40px;
+  }
+  @media (max-width: 730px) {
+    margin-bottom: 20px;
   }
 }
 
@@ -167,13 +190,21 @@
     font-size: 22px;
     line-height: 25px;
   }
+  @media (max-width: 730px) {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 @media (max-width: 1450px) {
   .tickets-container-buy-form-tickets-amount-quantity {
     margin-bottom: 25px;
   }
 }
-
+@media (max-width: 730px) {
+  .tickets-container-buy-form-tickets-amount-quantity {
+    margin-bottom: 20px;
+  }
+}
 .tickets-container-buy-form-tickets-amount-submit {
   position: absolute;
   right: 0;
@@ -197,6 +228,11 @@
   }
   @media (max-width: 920px) {
     right: 50px;
+  }
+  @media (max-width: 730px) {
+    right: 110px;
+    font-size: 16px;
+    line-height: normal;
   }
 }
 
@@ -229,6 +265,7 @@
   line-height: 25px;
   text-align: center;
   border: none;
+
 }
 
 .tickets-container-buy-form-tickets-amount-quantity-box .input-text::-webkit-outer-spin-button,

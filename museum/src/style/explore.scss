@@ -33,6 +33,10 @@
     line-height: 60px;
     margin-bottom: 0;
   }
+  @media (max-width: 730px) {
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
 
 .explore-container-description > p {
@@ -71,5 +75,9 @@
   }
   @media (max-width: 920px) {
     width: 100%;
+  }
+  @media (max-width: 730px) {
+    width: 380px;
+    height: 368px;
   }
 }

@@ -11,6 +11,10 @@
     font-size: 40px;
     line-height: 60px;
   }
+  @media (max-width: 730px) {
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
 
 .contacts-container-map {
@@ -44,6 +48,10 @@
     font-size: 20px;
     line-height: 23px;
   }
+  @media (max-width: 730px) {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 .contacts-container-map-descriptions > address > p {
@@ -62,6 +70,10 @@
   @media (max-width: 920px) {
     font-size: 18px;
     line-height: 21px;
+  }
+  @media (max-width: 730px) {
+    font-size: 16px;
+    line-height: 19px;
   }
 }
 
@@ -90,5 +102,9 @@
     width: 728px;
     height: 476px;
     margin-top: 40px;
+  }
+  @media (max-width: 730px) {
+    width: 380px;
+    height: 248px;
   }
 }

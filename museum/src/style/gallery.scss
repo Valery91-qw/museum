@@ -18,6 +18,9 @@
     padding-top: 40px;
     height: 1200px;
   }
+  @media (max-width: 730px) {
+    height: 760px;
+  }
 }
 
 .gallery-container > h2 {
@@ -32,6 +35,10 @@
     line-height: 60px;
     margin-bottom: 40px;
   }
+  @media (max-width: 730px){
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
 
 .gallery-content {
@@ -44,6 +51,10 @@
   }
   @media (max-width: 920px) {
     max-height: 2900px;
+    align-items: center;
+  }
+  @media (max-width: 730px) {
+    max-height: 2000px;
   }
 }
 
