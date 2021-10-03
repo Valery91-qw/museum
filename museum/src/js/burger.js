@@ -13,7 +13,7 @@ burgerButton.addEventListener('click', () => {
 })
 
 document.querySelector('html').addEventListener('click', (event) => {
-    if(event.target.tagName !== 'li' && event.target.id !== 'burger-button') {
+    if(event.target.tagName !== 'A' && event.target.id !== 'burger-button') {
         list.classList.remove('visible')
         welcomeDescription.classList.remove('hide')
     }

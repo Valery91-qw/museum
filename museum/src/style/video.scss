@@ -1,3 +1,5 @@
+@import "common/sass/variables";
+
 .video-section-description {
   display: flex;
   margin-bottom: 75px;
@@ -132,4 +134,117 @@
 .video-section-player-pagination > ul > li:first-child {
   margin-left: 0;
   background-color: #000000;
+}
+//custom box
+.video-section-custom-player {
+  position: relative;
+
+  .video-section-player-custom-player-controls {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    .video-section-player-play-button {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      button {
+        display: block;
+        width: 220px;
+        height: 220px;
+        background: none;
+        border-radius: 50%;
+        border: 10px solid #ffffff;
+        img {
+          margin-left: 25px;
+        }
+      }
+    }
+
+    .video-section-player-controls {
+      display: flex;
+      justify-content: flex-end;
+      padding: 25px 30px;
+      width: 100%;
+      background-color: $BG-Dark;
+      align-items: center;
+      .play {
+        display: flex;
+        height: 100%;
+        flex-grow: 2;
+        align-items: center;
+        button {
+          background: none;
+          border: none;
+        }
+        input[type='range'] {
+          height: 8px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          display: block;
+          width: 100%;
+          margin-left: 50px;
+          &::-webkit-slider-runnable-track {
+            background-image: linear-gradient(to right, #710707 50%, transparent 0%);
+            height: 8px;
+          }
+
+          &::-webkit-slider-thumb {
+            border-radius: 10px;
+            cursor: pointer;
+            width:15px;
+            height: 15px;
+            background-color: #ffffff;
+            -webkit-appearance: none;
+            margin-top: -3px;
+          }
+        }
+      }
+      .volume {
+        display: flex;
+        height: 100%;
+        margin-left: 50px;
+        align-items: center;
+        button{
+          background: none;
+          border: none;
+          margin-right: 50px;
+        }
+        input[type='range'] {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          width: 100%;
+          min-width: 155px;
+          height: 8px;
+          &::-webkit-slider-runnable-track {
+            background-image: linear-gradient(to right, #710707 50%, transparent 0%);
+            height: 8px;
+          }
+
+          &::-webkit-slider-thumb {
+            border-radius: 10px;
+            cursor: pointer;
+            width:15px;
+            height: 15px;
+            background-color: #ffffff;
+            -webkit-appearance: none;
+            margin-top: -3px;
+          }
+        }
+      }
+      .fullscreen {
+        margin-left: 50px;
+      }
+    }
+  }
+
+
 }

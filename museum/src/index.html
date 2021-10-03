@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
     <link rel='stylesheet' href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"/>
-    <script defer src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
     <link rel="icon" href="assets/svg/louvre-icon.svg">
     <title>museum</title>
 </head>
@@ -181,13 +181,33 @@
                 </p>
             </div>
             <div class="video-section-player">
-                <iframe class="video-section-frame"
-                        src="https://www.youtube.com/embed/zp1BXPX8jcU?&autoplay=0"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        loading="lazy"
-                        allowfullscreen>
-                </iframe>
+                <div class="video-section-custom-player">
+                    <video width="100%" id="video-player" poster="assets/img/video/video-poster0.jpg" controls >
+                        <source src="assets/video/video0.mp4">
+                    </video>
+                    <div class="video-section-player-custom-player-controls">
+                        <div class="video-section-player-play-button">
+                            <button>
+                                <img src="assets/img/video/Vector.svg" alt="play">
+                            </button>
+                        </div>
+                        <div class="video-section-player-controls">
+                            <label class="play">
+                                <button>
+                                    <img src="assets/img/video/control-play.svg">
+                                </button>
+                                <input type="range">
+                            </label>
+                            <label class="volume">
+                                <button>
+                                    <img src="assets/img/video/volume.svg">
+                                </button>
+                                <input type="range" min="0" max="100" value="50" step="1">
+                            </label>
+                            <img class="fullscreen" src="assets/img/video/toggle-fullscreen.svg" alt="fullscreen">
+                        </div>
+                    </div>
+                </div>
                 <div class="video-section-player-items">
                     <iframe class="video-section-player-item" src="https://www.youtube.com/embed/Vi5D6FKhRmo"
                             title="YouTube video player"
