@@ -191,11 +191,10 @@
           display: block;
           width: 100%;
           margin-left: 50px;
+          background-image: linear-gradient(to right, #710707 50%, #C4C4C4 0%);
           &::-webkit-slider-runnable-track {
-            background-image: linear-gradient(to right, #710707 50%, transparent 0%);
             height: 8px;
           }
-
           &::-webkit-slider-thumb {
             border-radius: 10px;
             cursor: pointer;
@@ -224,8 +223,8 @@
           width: 100%;
           min-width: 155px;
           height: 8px;
+          background-image: linear-gradient(to right, #710707 50%, #C4C4C4 0%);
           &::-webkit-slider-runnable-track {
-            background-image: linear-gradient(to right, #710707 50%, transparent 0%);
             height: 8px;
           }
 
