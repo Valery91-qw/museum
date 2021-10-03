@@ -137,6 +137,10 @@
 }
 //custom box
 .video-section-custom-player {
+  video {
+    width: 100%;
+  }
+
   position: relative;
 
   .video-section-player-custom-player-controls {
@@ -161,9 +165,13 @@
         background: none;
         border-radius: 50%;
         border: 10px solid #ffffff;
+        cursor: pointer;
         img {
           margin-left: 25px;
         }
+      }
+      button.hide {
+        visibility: hidden;
       }
     }
 
@@ -179,9 +187,14 @@
         height: 100%;
         flex-grow: 2;
         align-items: center;
+        img {
+          width: 23px;
+          height: 30px;
+        }
         button {
           background: none;
           border: none;
+          cursor: pointer;
         }
         input[type='range'] {
           height: 8px;
@@ -215,6 +228,7 @@
           background: none;
           border: none;
           margin-right: 50px;
+          cursor: pointer;
         }
         input[type='range'] {
           -webkit-appearance: none;
@@ -241,6 +255,7 @@
       }
       .fullscreen {
         margin-left: 50px;
+        cursor: pointer;
       }
     }
   }

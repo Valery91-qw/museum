@@ -1,14 +1,47 @@
 let videoPlayer = document.getElementById('video-player');
 let inputs = document.querySelectorAll('input[type=range]');
+let playButton = document.querySelector('.video-section-player-play-button')
+let controlButton = document.getElementById('video-control-play')
+let image = document.getElementById('play-image')
+import stop from '../assets/img/video/pause.svg'
+import play from '../assets/img/video/control-play.svg'
 
 inputs.forEach(element => {
     element.addEventListener('input', (event) => {
         let target = event.target
 
-        let min = target.min
-        let max = target.max
         let value = target.value
 
         target.style.backgroundImage = `linear-gradient(to right, #710707 ${value}%, #C4C4C4 0%)`
     })
+})
+
+playButton.addEventListener('click', () => {
+
+    let button = document.getElementById('play-button');
+
+    if (button.classList.contains('hide')) {
+        videoPlayer.pause()
+        button.classList.remove('hide')
+        image.src = play
+    } else {
+        videoPlayer.play()
+        button.classList.add('hide')
+        image.src = stop
+    }
+})
+
+controlButton.addEventListener('click', (event) => {
+
+    let button = document.getElementById('play-button');
+
+    if (button.classList.contains('hide')) {
+        videoPlayer.pause()
+        button.classList.remove('hide')
+        image.src = play
+    } else {
+        videoPlayer.play()
+        button.classList.add('hide')
+        image.src = stop
+    }
 })

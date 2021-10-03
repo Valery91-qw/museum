@@ -182,25 +182,25 @@
             </div>
             <div class="video-section-player">
                 <div class="video-section-custom-player">
-                    <video width="100%" id="video-player" poster="assets/img/video/video-poster0.jpg" controls >
+                    <video id="video-player" poster="assets/img/video/video-poster0.jpg">
                         <source src="assets/video/video0.mp4">
                     </video>
                     <div class="video-section-player-custom-player-controls">
                         <div class="video-section-player-play-button">
-                            <button>
+                            <button id="play-button">
                                 <img src="assets/img/video/Vector.svg" alt="play">
                             </button>
                         </div>
                         <div class="video-section-player-controls">
                             <label class="play">
-                                <button>
-                                    <img src="assets/img/video/control-play.svg">
+                                <button id="video-control-play">
+                                    <img id="play-image" src="assets/img/video/control-play.svg" alt="play">
                                 </button>
                                 <input type="range">
                             </label>
                             <label class="volume">
                                 <button>
-                                    <img src="assets/img/video/volume.svg">
+                                    <img src="assets/img/video/volume.svg" alt="voice">
                                 </button>
                                 <input type="range" min="0" max="100" value="50" step="1">
                             </label>
