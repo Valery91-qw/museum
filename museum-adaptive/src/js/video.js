@@ -1,5 +1,7 @@
 import stop from '../assets/img/video/pause.svg'
 import play from '../assets/img/video/control-play.svg'
+import muteOn from '../assets/img/video/mute-on.svg'
+import muteOff from '../assets/img/video/mute-off.svg'
 
 let videoTrack = document.getElementById('video-player');
 
@@ -23,7 +25,12 @@ inputsRange.forEach(element => {
 })
 
 volumeControl.addEventListener('input', () => {
+    let sounds = document.getElementById('volume-image')
     videoTrack.volume = volumeControl.value / 100
+    sounds.src = muteOn
+    if(volumeControl.value <= 0){
+        sounds.src = muteOff
+    }
 }, false)
 
 playControl.addEventListener('input', () => {
@@ -36,7 +43,18 @@ videoTrack.addEventListener('timeupdate', () => {
     playControl.value = value
     playControl.style.backgroundImage = `linear-gradient(to right, #710707 ${value}%, #C4C4C4 0%)`
 })
+volumeControlButton.addEventListener('click', () => {
 
+    let sounds = document.getElementById('volume-image')
+
+    if(videoTrack.volume) {
+        videoTrack.volume = 0
+        sounds.src = muteOff
+        volumeControl.value = 0
+        volumeControl.style.backgroundImage = `linear-gradient(to right, #710707 0%, #C4C4C4 0%)`
+    }
+
+})
 const isPlaying = () => {
     let button = document.getElementById('play-button');
 
