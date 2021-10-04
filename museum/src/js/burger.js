@@ -7,10 +7,15 @@ burgerButton.addEventListener('click', () => {
         list.classList.remove('visible')
         welcomeDescription.classList.remove('hide')
         burgerButton.classList.remove('close')
+        document.querySelector('.welcome-carousel-item').classList.add('active')
     } else {
         list.classList.add('visible')
         welcomeDescription.classList.add('hide')
         burgerButton.classList.add('close')
+        if(screen.width < '970') {
+            document.querySelector('.welcome-carousel-item').classList.remove('active')
+            document.querySelector('.welcome-carousel-controls').classList.remove('hide')
+        }
     }
 })
 

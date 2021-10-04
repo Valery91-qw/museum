@@ -42,12 +42,12 @@
   }
 }
 .burger-list.visible {
-  display: block;
+  visibility: visible;
   left: 0;
   right: 0;
 }
 .burger-list {
-  //display: none;
+  visibility: hidden;
   position: absolute;
   left: -300px;
   top: 130px;
