@@ -1,10 +1,12 @@
+import stop from '../assets/img/video/pause.svg'
+import play from '../assets/img/video/control-play.svg'
+
 let videoPlayer = document.getElementById('video-player');
 let inputs = document.querySelectorAll('input[type=range]');
 let playButton = document.querySelector('.video-section-player-play-button')
 let controlButton = document.getElementById('video-control-play')
 let image = document.getElementById('play-image')
-import stop from '../assets/img/video/pause.svg'
-import play from '../assets/img/video/control-play.svg'
+let volumeControl = document.getElementById('audio-track')
 
 inputs.forEach(element => {
     element.addEventListener('input', (event) => {
@@ -15,6 +17,9 @@ inputs.forEach(element => {
         target.style.backgroundImage = `linear-gradient(to right, #710707 ${value}%, #C4C4C4 0%)`
     })
 })
+volumeControl.addEventListener('input', () => {
+    videoPlayer.volume = volumeControl.value / 100
+}, false)
 
 const isPlaying = () => {
     let button = document.getElementById('play-button');

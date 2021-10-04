@@ -196,13 +196,13 @@
                                 <button id="video-control-play">
                                     <img id="play-image" src="assets/img/video/control-play.svg" alt="play">
                                 </button>
-                                <input type="range">
+                                <input id="video-track" type="range" min="0" max="100" value="0" step="1">
                             </label>
                             <label class="volume">
                                 <button>
                                     <img src="assets/img/video/volume.svg" alt="voice">
                                 </button>
-                                <input type="range" min="0" max="100" value="50" step="1">
+                                <input id="audio-track" type="range" min="0" max="100" value="100" step="1">
                             </label>
                             <img class="fullscreen" src="assets/img/video/toggle-fullscreen.svg" alt="fullscreen">
                         </div>
