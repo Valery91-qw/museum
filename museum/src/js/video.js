@@ -16,8 +16,7 @@ inputs.forEach(element => {
     })
 })
 
-playButton.addEventListener('click', () => {
-
+const isPlaying = () => {
     let button = document.getElementById('play-button');
 
     if (button.classList.contains('hide')) {
@@ -29,19 +28,12 @@ playButton.addEventListener('click', () => {
         button.classList.add('hide')
         image.src = stop
     }
+}
+
+playButton.addEventListener('click', () => {
+    isPlaying()
 })
 
 controlButton.addEventListener('click', (event) => {
-
-    let button = document.getElementById('play-button');
-
-    if (button.classList.contains('hide')) {
-        videoPlayer.pause()
-        button.classList.remove('hide')
-        image.src = play
-    } else {
-        videoPlayer.play()
-        button.classList.add('hide')
-        image.src = stop
-    }
+    isPlaying()
 })
