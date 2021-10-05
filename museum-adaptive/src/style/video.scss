@@ -37,22 +37,6 @@
     line-height: 40px;
   }
 }
-.video-section-frame {
-  border: none;
-  position: relative;
-  width: 100%;
-  height: 650px;
-  @media (max-width: 1450px) {
-    height: 540px;
-  }
-  @media (max-width: 920px) {
-    height: 386px;
-  }
-  @media (max-width: 730px){
-    width: 380px;
-    height: 266px;
-  }
-}
 
 .video-section-player-items {
   margin: 40px 0;
@@ -140,7 +124,6 @@
   video {
     width: 100%;
   }
-
   position: relative;
 
   .video-section-player-custom-player-controls {
