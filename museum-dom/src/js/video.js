@@ -96,6 +96,35 @@ videoControlButton.addEventListener('click', (event) => {
     isPlaying()
 })
 
+const changeRate = (change) => {
+
+    let rate = document.querySelector('.video-rate')
+
+    if(change === 'up') {
+        rate.classList.add('visible')
+        setTimeout(() => {
+            rate.classList.remove('visible')
+        }, 1000)
+        videoTrack.playbackRate += 0.1
+        rate.innerHTML = `${videoTrack.playbackRate.toFixed(1)}`
+
+    } else  {
+        rate.classList.add('visible')
+        setTimeout(() => {
+            rate.classList.remove('visible')
+        }, 1000)
+        videoTrack.playbackRate -= 0.1
+        rate.innerHTML = `${videoTrack.playbackRate.toFixed(1)}`
+    }
+
+}
+const isFullscreen = () => {
+    if(document.fullscreenElement) {
+        document.exitFullscreen();
+    } else {
+        document.querySelector('.video-section-custom-player').requestFullscreen()
+    }
+}
 document.addEventListener('keydown', (event) => {
     event.preventDefault();
     if(event.code === 'Space') {
@@ -105,14 +134,15 @@ document.addEventListener('keydown', (event) => {
         isVolume()
     }
     if(event.code === 'KeyF') {
-        if(document.fullscreenElement) {
-            document.exitFullscreen();
-        } else {
-            document.querySelector('.video-section-custom-player').requestFullscreen()
-        }
+        isFullscreen()
+    }
+    if(event.shiftKey && event.code === 'Period') {
+        changeRate('up')
+    }
+    if(event.shiftKey && event.code === 'Comma') {
+        changeRate('down')
     }
 
-    console.log(event.code)
 })
 
 document.querySelector('.video-section-custom-player')
@@ -123,10 +153,7 @@ document.querySelector('.video-section-custom-player')
         fullscreenButton.src = fullScreenOn
     }
 })
+
 fullscreenButton.addEventListener('click', () => {
-    if(document.fullscreenElement) {
-        document.exitFullscreen();
-    } else {
-        document.querySelector('.video-section-custom-player').requestFullscreen()
-    }
+    isFullscreen()
 })

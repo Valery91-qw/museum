@@ -363,5 +363,18 @@
     }
   }
 
-
+  .video-rate {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    color: #ffffff;
+    transition: 1s linear;
+  }
+  .video-rate.visible {
+    visibility: visible;
+    transition: 1s linear;
+  }
 }
