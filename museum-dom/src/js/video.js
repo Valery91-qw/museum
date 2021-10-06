@@ -2,6 +2,8 @@ import stop from '../assets/img/video/pause.svg';
 import play from '../assets/img/video/control-play.svg';
 import muteOn from '../assets/img/video/mute-on.svg';
 import muteOff from '../assets/img/video/mute-off.svg';
+import fullScreenOff from '../assets/img/video/fullscreen_exit.svg'
+import fullScreenOn from '../assets/img/video/toggle-fullscreen.svg'
 //video
 let videoTrack = document.querySelector('.video-player')
 // main-video controls elements
@@ -9,6 +11,7 @@ let commonPlayButton = document.querySelector('.video-section-player-play-button
 let videoControlButton = document.getElementById('video-control-play')
 let volumeControlButton = document.getElementById('volume-control-button')
 let videoPlayImage = document.getElementById('play-image')
+let fullscreenButton = document.querySelector('.fullscreen')
 // inputs
 let inputsRange = document.querySelectorAll('input[type=range]')
 let volumeControl = document.getElementById('audio-track')
@@ -47,17 +50,15 @@ videoTrack.addEventListener('timeupdate', () => {
     playControl.value = value
     playControl.style.backgroundImage = `linear-gradient(to right, #710707 ${value}%, #C4C4C4 0%)`
 })
+videoTrack.addEventListener('ended', () => {
+    let button = document.getElementById('play-button');
+    button.classList.remove('hide')
+    playControl.style.backgroundImage = `linear-gradient(to right, #710707 0%, #C4C4C4 0%)`
+    playControl.value = 0
+    videoPlayImage.src = play
+})
 volumeControlButton.addEventListener('click', () => {
-
-    let sounds = document.getElementById('volume-image')
-
-    if(videoTrack.volume) {
-        videoTrack.volume = 0
-        sounds.src = muteOff
-        volumeControl.value = 0
-        volumeControl.style.backgroundImage = `linear-gradient(to right, #710707 0%, #C4C4C4 0%)`
-    }
-
+    isVolume()
 })
 const isPlaying = () => {
     let button = document.getElementById('play-button');
@@ -72,11 +73,60 @@ const isPlaying = () => {
         videoPlayImage.src = stop
     }
 }
+const isVolume = () => {
+    let sounds = document.getElementById('volume-image')
 
+    if(videoTrack.volume) {
+        videoTrack.volume = 0
+        sounds.src = muteOff
+        volumeControl.value = 0
+        volumeControl.style.backgroundImage = `linear-gradient(to right, #710707 0%, #C4C4C4 0%)`
+    } else  {
+        videoTrack.volume = 1
+        sounds.src = muteOn;
+        volumeControl.value = 100
+        volumeControl.style.backgroundImage = `linear-gradient(to right, #710707 100%, #C4C4C4 0%)`
+    }
+}
 commonPlayButton.addEventListener('click', () => {
     isPlaying()
 })
 
 videoControlButton.addEventListener('click', (event) => {
     isPlaying()
+})
+
+document.addEventListener('keydown', (event) => {
+    event.preventDefault();
+    if(event.code === 'Space') {
+        isPlaying()
+    }
+    if(event.code === 'KeyM') {
+        isVolume()
+    }
+    if(event.code === 'KeyF') {
+        if(document.fullscreenElement) {
+            document.exitFullscreen();
+        } else {
+            document.querySelector('.video-section-custom-player').requestFullscreen()
+        }
+    }
+
+    console.log(event.code)
+})
+
+document.querySelector('.video-section-custom-player')
+    .addEventListener('fullscreenchange', (event) => {
+    if(document.fullscreenElement) {
+        fullscreenButton.src = fullScreenOff
+    } else {
+        fullscreenButton.src = fullScreenOn
+    }
+})
+fullscreenButton.addEventListener('click', () => {
+    if(document.fullscreenElement) {
+        document.exitFullscreen();
+    } else {
+        document.querySelector('.video-section-custom-player').requestFullscreen()
+    }
 })
