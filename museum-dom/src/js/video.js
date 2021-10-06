@@ -3,7 +3,7 @@ import play from '../assets/img/video/control-play.svg';
 import muteOn from '../assets/img/video/mute-on.svg';
 import muteOff from '../assets/img/video/mute-off.svg';
 //video
-let videoTrack = document.getElementById('video-player')
+let videoTrack = document.querySelector('.video-player')
 // main-video controls elements
 let commonPlayButton = document.querySelector('.video-section-player-play-button')
 let videoControlButton = document.getElementById('video-control-play')
