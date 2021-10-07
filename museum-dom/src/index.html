@@ -317,7 +317,7 @@
                                         onclick="this.previousElementSibling.stepUp()">+</button>
                             </div>
                         </div>
-                        <h4>Total €<span id="total-amount">220</span></h4>
+                        <h4>Total €<span class="total-tickets-coast">220</span></h4>
                     </div>
                 </form>
                 <button class="tickets-container-buy-form-tickets-amount-submit" form="buy-tickets" type="submit">Buy
@@ -447,15 +447,15 @@
                 <img src="assets/svg/modal-icons/type.svg" alt="type">
                 <select id="modal-type" name="type">
                     <option value="" disabled selected hidden>Ticket Type</option>
-                    <option value="Permanent exhibition">Permanent exhibition</option>
-                    <option value="Temporary exhibition">Temporary exhibition</option>
-                    <option value="Combined admission">Combined admission</option>
+                    <option value="Permanent exhibition" data-coast="20">Permanent exhibition</option>
+                    <option value="Temporary exhibition" data-coast="25">Temporary exhibition</option>
+                    <option value="Combined admission" data-coast="40">Combined admission</option>
                 </select>
             </label>
             <div class="tickets-container-buy-form-tickets-amount">
                 <h4 class="underline-title">Entry ticket</h4>
                 <div class="tickets-container-buy-form-tickets-amount-quantity">
-                    <h5>Basic 18+ (20 &#8364;)</h5>
+                    <h5>Basic 18+ (<span class="modal-basic-coast">20</span> &#8364;)</h5>
                     <div class="tickets-container-buy-form-tickets-amount-quantity-box">
                         <button class="minus" type="button" value="-"
                                 onclick="this.nextElementSibling.stepDown()">-</button>
@@ -465,11 +465,11 @@
                     </div>
                 </div>
                 <div class="tickets-container-buy-form-tickets-amount-quantity">
-                    <h5>Senior 65+ (10 &#8364;)</h5>
+                    <h5>Senior 65+ (<span class="modal-senior-coast">10</span> &#8364;)</h5>
                     <div class="tickets-container-buy-form-tickets-amount-quantity-box">
                         <button class="minus" type="button" value="-"
                                 onclick="this.nextElementSibling.stepDown()">-</button>
-                        <input class="input-text" type="number" step="1" min="0" max="20" value="1" readonly>
+                        <input class="input-text" id="modal-senior" type="number" step="1" min="0" max="20" value="1" readonly>
                         <button class="plus" type="button" value="+"
                                 onclick="this.previousElementSibling.stepUp()">+</button>
                     </div>
@@ -487,16 +487,16 @@
                     <li id="modal-time">
                         <img src="assets/svg/modal-icons/time.svg" alt="time">16 : 30
                     </li>
-                    <li id="modal-type-tickets">
+                    <li>
                         <img src="assets/svg/modal-icons/check_circle_outline.svg" alt="check circle">
-                        Temporary exhibition
+                        <span id="modal-tickets-type">Permanent exhibition</span>
                     </li>
                 </ul>
                 <div class="modal-window-booking-card-preview-total-price">
                     <div>
                         <p>
                             <span class="total-amount" id="modal-basic-amount">1</span>
-                            Basic (<span id="modal-basic-coast">20</span> &#8364;)
+                            Basic (<span class="modal-basic-coast">20</span> &#8364;)
                         </p>
                         <p>
                             <span id="modal-basic-total-coast">20</span> &#8364;
@@ -505,14 +505,14 @@
                     <div>
                         <p>
                             <span class="total-amount" id="modal-senior-amount">1</span>
-                            Senior (<span id="modal-senior-coast">10</span> &#8364;)
+                            Senior (<span class="modal-senior-coast">10</span> &#8364;)
                         </p>
                         <p><span id="modal-senior-total-coast">10</span> &#8364;</p>
                     </div>
                     <hr>
                     <div>
                         <p>Total:</p>
-                        <p><span id="modal-total-coast">30</span> &#8364;</p>
+                        <p><span class="total-tickets-coast">30</span> &#8364;</p>
                     </div>
                 </div>
             </div>
