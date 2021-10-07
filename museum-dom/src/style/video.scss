@@ -39,6 +39,9 @@
 }
 
 .video-section-player-items {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
   margin: 40px 0;
   @media (max-width: 920px) {
     margin: 20px 0;
@@ -46,6 +49,8 @@
 }
 
 .video-section-player-item {
+  margin-left: 40px;
+  flex-basis: 425px 254px;
   position: relative;
   width: 425px;
   height: 254px;
@@ -61,6 +66,9 @@
     width: 180px;
     height: 110px;
   }
+}
+.video-section-player-item:first-child {
+  margin-left: 0;
 }
 
 .video-section-player-pagination {

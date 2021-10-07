@@ -6,6 +6,7 @@ import "./js/gallery"
 import "./js/welcome-carousel"
 import "./js/burger"
 import "./js/video"
+import "./js/tickets"
 
 const formBuyTickets = document.getElementById('buy-tickets');
 
