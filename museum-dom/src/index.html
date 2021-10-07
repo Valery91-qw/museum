@@ -269,19 +269,28 @@
             <div class="tickets-container-buy">
                 <img class="tickets-container-buy-image" src="assets/img/tickets-image.jpg" alt="tickets">
                 <form class="tickets-container-buy-form" id="buy-tickets">
-                    <fieldset class="tickets-container-buy-form-tickets-type" name="exhibition">
+                    <fieldset class="tickets-container-buy-form-tickets-type" id="tickets-type" name="exhibition">
                         <h4>Ticket Type</h4>
                         <label for="permanentExhibition">
-                            <input type="radio" id="permanentExhibition" value="permanent" name="exhibition">
+                            <input type="radio"
+                                   id="permanentExhibition"
+                                   value="20" name="exhibition"
+                                   data-name="Permanent exhibition">
                             Permanent exhibition
                         </label>
                         <label for="temporaryExhibition">
-                            <input type="radio" id="temporaryExhibition" value="temporary" name="exhibition">
+                            <input type="radio"
+                                   id="temporaryExhibition"
+                                   value="25" name="exhibition"
+                                   data-name="Temporary exhibition">
                             Temporary exhibition
                         </label>
                         <label for="combinedAdmission">
-                            <input type="radio" id="combinedAdmission" value="combined" name="exhibition">
-                            Combined Admission
+                            <input type="radio"
+                                   id="combinedAdmission"
+                                   value="40" name="exhibition"
+                                   data-name="Combined admission">
+                            Combined admission
                         </label>
                     </fieldset>
                     <div class="tickets-container-buy-form-tickets-amount">
@@ -436,11 +445,11 @@
             </label>
             <label>
                 <img src="assets/svg/modal-icons/type.svg" alt="type">
-                <select id="type" name="type">
+                <select id="modal-type" name="type">
                     <option value="" disabled selected hidden>Ticket Type</option>
-                    <option value="permanent">Permanent exhibition</option>
-                    <option value="temporary">Temporary exhibition</option>
-                    <option value="combined">Combined Admission</option>
+                    <option value="Permanent exhibition">Permanent exhibition</option>
+                    <option value="Temporary exhibition">Temporary exhibition</option>
+                    <option value="Combined admission">Combined admission</option>
                 </select>
             </label>
             <div class="tickets-container-buy-form-tickets-amount">
@@ -472,21 +481,26 @@
                 <h5>Overview</h5>
                 <h6>Tour to Louvre</h6>
                 <ul>
-                    <li>
+                    <li id="modal-date">
                         <img src="assets/svg/modal-icons/date.svg" alt="date">Friday, August 19
                     </li>
-                    <li>
+                    <li id="modal-time">
                         <img src="assets/svg/modal-icons/time.svg" alt="time">16 : 30
                     </li>
-                    <li>
+                    <li id="modal-type-tickets">
                         <img src="assets/svg/modal-icons/check_circle_outline.svg" alt="check circle">
                         Temporary exhibition
                     </li>
                 </ul>
                 <div class="modal-window-booking-card-preview-total-price">
                     <div>
-                        <p><span class="total-amount">2</span> Basic (20 &#8364;)</p>
-                        <p><span>40</span> &#8364;</p>
+                        <p>
+                            <span class="total-amount" id="modal-basic-amount">1</span>
+                            Basic (<span id="modal-basic-coast">20</span> &#8364;)
+                        </p>
+                        <p>
+                            <span id="modal-basic-total-coast">20</span> &#8364;
+                        </p>
                     </div>
                     <div>
                         <p><span class="total-amount">2</span> Senior (10 &#8364;)</p>
