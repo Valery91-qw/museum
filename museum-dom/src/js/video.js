@@ -125,24 +125,29 @@ const isFullscreen = () => {
         document.querySelector('.video-section-custom-player').requestFullscreen()
     }
 }
-document.addEventListener('keydown', (event) => {
-    event.preventDefault();
-    if(event.code === 'Space') {
-        isPlaying()
-    }
-    if(event.code === 'KeyM') {
-        isVolume()
-    }
-    if(event.code === 'KeyF') {
-        isFullscreen()
-    }
-    if(event.shiftKey && event.code === 'Period') {
-        changeRate('up')
-    }
-    if(event.shiftKey && event.code === 'Comma') {
-        changeRate('down')
-    }
 
+document.addEventListener('keydown', (event) => {
+    if(elementInViewport2(videoPlayImage) || document.fullscreenElement) {
+        event.preventDefault();
+        if (event.code === 'Space') {
+            isPlaying()
+        }
+        if (event.code === 'KeyM') {
+            isVolume()
+        }
+        if (event.code === 'KeyF') {
+            isFullscreen()
+        }
+        if (event.shiftKey && event.code === 'Period') {
+            changeRate('up')
+        }
+        if (event.shiftKey && event.code === 'Comma') {
+            changeRate('down')
+        }
+    }
+    else {
+
+    }
 })
 
 document.querySelector('.video-section-custom-player')
@@ -157,3 +162,27 @@ document.querySelector('.video-section-custom-player')
 fullscreenButton.addEventListener('click', () => {
     isFullscreen()
 })
+
+
+
+function elementInViewport2(el) {
+    var top = el.offsetTop;
+    var left = el.offsetLeft;
+    var width = el.offsetWidth;
+    var height = el.offsetHeight;
+
+    while(el.offsetParent) {
+        el = el.offsetParent;
+        top += el.offsetTop;
+        left += el.offsetLeft;
+    }
+
+    return (
+        top < (window.pageYOffset + window.innerHeight) &&
+        left < (window.pageXOffset + window.innerWidth) &&
+        (top + height) > window.pageYOffset &&
+        (left + width) > window.pageXOffset
+    );
+}
+
+console.log()
