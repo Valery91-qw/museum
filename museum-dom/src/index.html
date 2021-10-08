@@ -459,7 +459,7 @@
                     <div class="tickets-container-buy-form-tickets-amount-quantity-box">
                         <button class="minus" type="button" value="-"
                                 onclick="this.nextElementSibling.stepDown()">-</button>
-                        <input class="input-text" type="number" step="1" min="0" max="20" value="1" readonly>
+                        <input class="input-text" id="modal-basic" type="number" step="1" min="0" max="20" value="1" readonly>
                         <button class="plus" type="button" value="+"
                                 onclick="this.previousElementSibling.stepUp()">+</button>
                     </div>
@@ -515,10 +515,6 @@
                         <p><span class="total-tickets-coast">30</span> &#8364;</p>
                     </div>
                 </div>
-            </div>
-            <div class="modal-window-booking-card-payment">
-                <img class="avers" src="assets/img/modal-window/avers-cart.jpg" alt="card avers">
-                <img class="revers" src="assets/img/modal-window/revers-cart.jpg" alt="card revers">
             </div>
             <button class="button submit" id="modal-booking-button" type="submit" form="payment-tickets">Book</button>
         </div>
