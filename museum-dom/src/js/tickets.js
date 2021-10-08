@@ -12,6 +12,16 @@ let basicTicketsTotalCoastText = document.getElementById('modal-basic-total-coas
 let seniorTicketCoastText = document.querySelectorAll('.modal-senior-coast')
 let seniorTicketsAmountText = document.getElementById('modal-senior-amount')
 let seniorTicketsTotalCoastText = document.getElementById('modal-senior-total-coast')
+let buyNowButton = document.querySelector('.tickets-container-buy-form-tickets-amount-submit')
+
+
+
+buyNowButton.addEventListener('click', () => {
+    let modalBasic = document.getElementById('modal-basic')
+    let modalSenior = document.getElementById('modal-senior')
+    modalBasic.value = commonBasicAmount.value
+    modalSenior.value = commonSeniorAmount.value
+})
 
 let coast = 20
 let basic = 1;
@@ -48,25 +58,29 @@ box.forEach(el => {
     })
 })
 
-commonTicketsType.addEventListener('change', (event) => {
-    coast = event.target.value
-
-    totalCoastTextElements.forEach(el => {
-        el.innerText = ` ${(basic * coast) + (senior * (coast / 2))}`
-    })
-
-    basicTicketsTotalCoastText.innerText = String(basic * coast)
-    seniorTicketsTotalCoastText.innerText = String(senior * (coast / 2))
-    ticketTypeText.innerText = event.target.dataset.name
-
-    ticketsType.value = event.target.dataset.name
-
+function changePraise() {
     basicTicketCoastText.forEach(el => {
         el.innerText = coast
     })
     seniorTicketCoastText.forEach(el => {
         el.innerText = String(coast / 2)
     })
+    totalCoastTextElements.forEach(el => {
+        el.innerText = ` ${(basic * coast) + (senior * (coast / 2))}`
+    })
+
+    basicTicketsTotalCoastText.innerText = String(basic * coast)
+    seniorTicketsTotalCoastText.innerText = String(senior * (coast / 2))
+}
+
+commonTicketsType.addEventListener('change', (event) => {
+    coast = event.target.value
+
+    ticketTypeText.innerText = event.target.dataset.name
+
+    ticketsType.value = event.target.dataset.name
+
+    changePraise()
 })
 
 ticketsType.addEventListener('change', function (event){
@@ -74,18 +88,7 @@ ticketsType.addEventListener('change', function (event){
 
     coast = this.selectedOptions[0].getAttribute('data-coast')
 
-    basicTicketCoastText.forEach(el => {
-        el.innerText = coast
-    })
-    seniorTicketCoastText.forEach(el => {
-        el.innerText = String(coast / 2)
-    })
-    totalCoastTextElements.forEach(el => {
-        el.innerText = ` ${(basic * coast) + (senior * (coast / 2))}`
-
-    })
-    basicTicketsTotalCoastText.innerText = String(basic * coast)
-    seniorTicketsTotalCoastText.innerText = String(senior * (coast / 2))
+    changePraise()
 })
 
 
