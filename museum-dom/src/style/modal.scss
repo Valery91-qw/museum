@@ -147,6 +147,12 @@
   .modal-input-name:valid {
     color: chartreuse;
   }
+  .modal-input-email:invalid {
+    color: #710707;
+  }
+  .modal-input-email:valid {
+    color: chartreuse;
+  }
 }
 
 .modal-window-booking-form > label {
