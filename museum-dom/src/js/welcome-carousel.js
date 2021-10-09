@@ -64,6 +64,22 @@ document.querySelector('.control.next').addEventListener('click', function () {
     }
 })
 
+const isSwipe = (elapsedTime, allowedTime, threshold, distX, distY, restraint) => {
+    if (elapsedTime <= allowedTime) {
+        if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+            if (distX > 0) {
+                if (isEnabled) {
+                    previousItem(currentItem);
+                }
+            } else {
+                if (isEnabled) {
+                    nextItem(currentItem);
+                }
+            }
+        }
+    }
+}
+
 const swipeDetected = (el) => {
 
     let startValueX = 0;
@@ -90,19 +106,7 @@ const swipeDetected = (el) => {
         distY = event.pageY - startValueY;
         elapsedTime = new Date().getTime() - startTime;
 
-        if (elapsedTime <= allowedTime) {
-            if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
-                if (distX > 0) {
-                    if (isEnabled) {
-                        previousItem(currentItem);
-                    }
-                } else {
-                    if (isEnabled) {
-                        nextItem(currentItem);
-                    }
-                }
-            }
-        }
+        isSwipe(elapsedTime, allowedTime, threshold, distX, distY, restraint)
         event.preventDefault();
     })
 
@@ -138,19 +142,7 @@ const swipeDetected = (el) => {
         distX = touchObj.pageX - startValueX;
         distY = touchObj.pageY - startValueY;
 
-        if (elapsedTime <= allowedTime) {
-            if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
-                if (distX > 0) {
-                    if (isEnabled) {
-                        previousItem(currentItem);
-                    }
-                } else {
-                    if (isEnabled) {
-                        nextItem(currentItem);
-                    }
-                }
-            }
-        }
+        isSwipe(elapsedTime, allowedTime, threshold, distX, distY, restraint)
         event.preventDefault();
     })
 }

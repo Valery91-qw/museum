@@ -141,6 +141,12 @@
     background-image: url("./assets/svg/modal-icons/arrow.svg");
     background-size: 17px;
   }
+  .modal-input-name:invalid {
+    color: #710707;
+  }
+  .modal-input-name:valid {
+    color: chartreuse;
+  }
 }
 
 .modal-window-booking-form > label {

@@ -163,13 +163,11 @@ fullscreenButton.addEventListener('click', () => {
     isFullscreen()
 })
 
-
-
 function elementInViewport2(el) {
-    var top = el.offsetTop;
-    var left = el.offsetLeft;
-    var width = el.offsetWidth;
-    var height = el.offsetHeight;
+    let top = el.offsetTop;
+    let left = el.offsetLeft;
+    let width = el.offsetWidth;
+    let height = el.offsetHeight;
 
     while(el.offsetParent) {
         el = el.offsetParent;
@@ -184,5 +182,3 @@ function elementInViewport2(el) {
         (left + width) > window.pageXOffset
     );
 }
-
-console.log()
