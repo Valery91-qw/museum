@@ -153,6 +153,12 @@
   .modal-input-email:valid {
     color: chartreuse;
   }
+  .modal-input-phone:invalid {
+    color: #710707;
+  }
+  .modal-input-phone:valid {
+    color: chartreuse;
+  }
 }
 
 .modal-window-booking-form > label {
