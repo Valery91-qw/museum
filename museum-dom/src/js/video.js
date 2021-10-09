@@ -16,10 +16,6 @@ let fullscreenButton = document.querySelector('.fullscreen')
 let inputsRange = document.querySelectorAll('input[type=range]')
 let volumeControl = document.getElementById('audio-track')
 let playControl = document.getElementById('video-track')
-//pagination controls element
-let prevButton = document.getElementById('video-prev')
-let nextButton = document.getElementById('video-next')
-
 
 inputsRange.forEach(element => {
     element.addEventListener('input', (event) => {
@@ -92,7 +88,7 @@ commonPlayButton.addEventListener('click', () => {
     isPlaying()
 })
 
-videoControlButton.addEventListener('click', (event) => {
+videoControlButton.addEventListener('click', () => {
     isPlaying()
 })
 
@@ -120,9 +116,9 @@ const changeRate = (change) => {
 }
 const isFullscreen = () => {
     if(document.fullscreenElement) {
-        document.exitFullscreen();
+        document.exitFullscreen().then();
     } else {
-        document.querySelector('.video-section-custom-player').requestFullscreen()
+        document.querySelector('.video-section-custom-player').requestFullscreen().then()
     }
 }
 
@@ -151,7 +147,7 @@ document.addEventListener('keydown', (event) => {
 })
 
 document.querySelector('.video-section-custom-player')
-    .addEventListener('fullscreenchange', (event) => {
+    .addEventListener('fullscreenchange', () => {
     if(document.fullscreenElement) {
         fullscreenButton.src = fullScreenOff
     } else {
