@@ -435,7 +435,7 @@
                 <img src="assets/svg/modal-icons/name.svg" alt="name">
                 <input class="modal-input-name"
                        type="text"
-                       pattern="([a-zA-Z0-9]){3,15}|([а-яА-я0-9]){3,15}"
+                       pattern="([a-zA-Z]){3,15}|([а-яА-я]){3,15}"
                        placeholder="Name">
             </label>
             <label>
@@ -443,13 +443,13 @@
                 <input class="modal-input-email"
                        type="email"
                        placeholder="Email"
-                       pattern="^[a-zA-Z]([a-zA-Z0-9_-]){3,15}@([a-zA-Z]){4,}.([a-zA-Z]){2,}">
+                       pattern="^[a-zA-Z0-9]([a-zA-Z0-9_-]){3,15}@([a-zA-Z]){4,}.([a-zA-Z]){2,}">
             </label>
             <label>
                 <img src="assets/svg/modal-icons/tel.svg" alt="tel">
                 <input class="modal-input-phone"
                        type="tel"
-                       pattern="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$"
+                       pattern="(\(?\d{2,3}\)?[\- ]?)?[\d\- ]{0,8}$"
                        placeholder="Phone">
             </label>
             <label>

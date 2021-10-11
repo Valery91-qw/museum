@@ -15,8 +15,7 @@ let seniorTicketsTotalCoastText = document.getElementById('modal-senior-total-co
 let buyNowButton = document.querySelector('.tickets-container-buy-form-tickets-amount-submit')
 
 
-
-buyNowButton.addEventListener('click', () => {
+buyNowButton.addEventListener('click', (event) => {
     let modalBasic = document.getElementById('modal-basic')
     let modalSenior = document.getElementById('modal-senior')
     modalBasic.value = commonBasicAmount.value
@@ -34,13 +33,11 @@ totalCoastTextElements.forEach(el => {
 let box = document.querySelectorAll('.tickets-container-buy-form-tickets-amount-quantity-box')
 
 box.forEach(el => {
-
-
     el.addEventListener('click', (event) => {
 
         let input = event.currentTarget.childNodes[3];
 
-        if(input.id === 'basic' || input.id === 'modal-basic') {
+        if (input.id === 'basic' || input.id === 'modal-basic') {
             basic = input.value
         } else {
             senior = input.value
@@ -83,13 +80,12 @@ commonTicketsType.addEventListener('change', (event) => {
     changePraise()
 })
 
-ticketsType.addEventListener('change', function (event){
+ticketsType.addEventListener('change', function (event) {
     ticketTypeText.innerText = event.target.value
 
     coast = this.selectedOptions[0].getAttribute('data-coast')
 
     changePraise()
 })
-
 
 

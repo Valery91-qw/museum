@@ -142,22 +142,46 @@
     background-size: 17px;
   }
   .modal-input-name:invalid {
+    font-family: $Font-text;
+    line-height: 21px;
+    font-weight: 400;
+    font-size: 18px;
     color: #710707;
   }
   .modal-input-name:valid {
-    color: chartreuse;
+    font-family: $Font-text;
+    line-height: 21px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #030303;
   }
   .modal-input-email:invalid {
+    font-family: $Font-text;
+    line-height: 21px;
+    font-weight: 400;
+    font-size: 18px;
     color: #710707;
   }
   .modal-input-email:valid {
-    color: chartreuse;
+    font-family: $Font-text;
+    line-height: 21px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #030303;
   }
   .modal-input-phone:invalid {
+    font-family: $Font-text;
+    line-height: 21px;
+    font-weight: 400;
+    font-size: 18px;
     color: #710707;
   }
   .modal-input-phone:valid {
-    color: chartreuse;
+    font-family: $Font-text;
+    line-height: 21px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #030303;
   }
 }
 
