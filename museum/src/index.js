@@ -3,10 +3,11 @@ import "./assets/svg/louvre-icon.svg"
 import "./js/mapbox"
 import "./js/modal"
 import "./js/gallery"
-import "./js/welcome-carousel"
+import "./js/carousel/carousel"
 import "./js/burger"
 import "./js/video"
 import "./js/tickets"
+import "./js/explore"
 
 const formBuyTickets = document.getElementById('buy-tickets');
 

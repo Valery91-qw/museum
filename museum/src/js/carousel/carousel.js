@@ -1,17 +1,19 @@
+import constants from "./constants";
+
 let carouselItems = document.querySelectorAll('.welcome-carousel-item');
 let display = document.querySelector('.welcome-carousel-controls-display');
 let li = document.querySelectorAll('.list-item')
 let ul = document.getElementById('items-list')
 
-let currentItem = 0;
+let currentItem = constants.startItem;
 let isEnabled = true;
 
 ul.addEventListener('click', function (event) {
     if (event.target.tagName === "LI") {
-        if (event.target.classList.contains('active')) {
+        if (event.target.classList.contains(constants.activeClass)) {
             return
         }
-        nextItem(event.target.innerText - 2)
+        changeCLickedItem(Number(event.target.innerText) - 1);
     }
 })
 
@@ -25,31 +27,37 @@ function hideItem(direction) {
     isEnabled = false;
     carouselItems[currentItem].classList.add(direction)
     carouselItems[currentItem].addEventListener('animationend', function () {
-        this.classList.remove('active', direction)
+        this.classList.remove(constants.activeClass, direction)
     })
-    li[currentItem].classList.remove('active')
+    li[currentItem].classList.remove(constants.activeClass)
 }
 
 function showItem(direction) {
-    carouselItems[currentItem].classList.add('next', direction)
+    carouselItems[currentItem].classList.add(constants.nextClass, direction)
     carouselItems[currentItem].addEventListener('animationend', function () {
-        this.classList.remove('next', direction)
-        this.classList.add('active')
+        this.classList.remove(constants.nextClass, direction)
+        this.classList.add(constants.activeClass)
         isEnabled = true
     })
-    li[currentItem].classList.add('active')
+    li[currentItem].classList.add(constants.activeClass)
 }
 
 function previousItem(item) {
-    hideItem('to-right')
-    changeItem(item - 1)
-    showItem('from-right')
+    hideItem(constants.animationClassToRight);
+    changeItem(item - 1);
+    showItem(constants.animationClassFromRight);
 }
 
 function nextItem(item) {
-    hideItem('to-left')
-    changeItem(item + 1)
-    showItem('from-left')
+    hideItem(constants.animationClassToLeft);
+    changeItem(item + 1);
+    showItem(constants.animationClassFromLeft);
+}
+
+function changeCLickedItem(item) {
+    hideItem(constants.animationClassToLeft);
+    changeItem(item);
+    showItem(constants.animationClassFromLeft);
 }
 
 document.querySelector('.control.prev').addEventListener('click', function () {
@@ -63,22 +71,6 @@ document.querySelector('.control.next').addEventListener('click', function () {
         nextItem(currentItem)
     }
 })
-
-const isSwipe = (elapsedTime, allowedTime, threshold, distX, distY, restraint) => {
-    if (elapsedTime <= allowedTime) {
-        if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
-            if (distX > 0) {
-                if (isEnabled) {
-                    previousItem(currentItem);
-                }
-            } else {
-                if (isEnabled) {
-                    nextItem(currentItem);
-                }
-            }
-        }
-    }
-}
 
 const swipeDetected = (el) => {
 
@@ -106,7 +98,19 @@ const swipeDetected = (el) => {
         distY = event.pageY - startValueY;
         elapsedTime = new Date().getTime() - startTime;
 
-        isSwipe(elapsedTime, allowedTime, threshold, distX, distY, restraint)
+        if (elapsedTime <= allowedTime) {
+            if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+                if (distX > 0) {
+                    if (isEnabled) {
+                        previousItem(currentItem);
+                    }
+                } else {
+                    if (isEnabled) {
+                        nextItem(currentItem);
+                    }
+                }
+            }
+        }
         event.preventDefault();
     })
 
@@ -142,7 +146,19 @@ const swipeDetected = (el) => {
         distX = touchObj.pageX - startValueX;
         distY = touchObj.pageY - startValueY;
 
-        isSwipe(elapsedTime, allowedTime, threshold, distX, distY, restraint)
+        if (elapsedTime <= allowedTime) {
+            if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+                if (distX > 0) {
+                    if (isEnabled) {
+                        previousItem(currentItem);
+                    }
+                } else {
+                    if (isEnabled) {
+                        nextItem(currentItem);
+                    }
+                }
+            }
+        }
         event.preventDefault();
     })
 }

@@ -1,8 +1,6 @@
-import {apiKey} from "./variable";
-
 const mapElement = document.getElementById('map')
 
-mapboxgl.accessToken = apiKey;
+mapboxgl.accessToken = 'pk.eyJ1IjoidmFsZXJ5OTEtcXciLCJhIjoiY2t0eDRpcnl1MnEzZDJ5cG4yejNyM3FhaiJ9.tgMNlycNQ2r8btDxfAGlxw';
 
 const map = new mapboxgl.Map({
     container: mapElement,
